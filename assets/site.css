@@ -167,7 +167,7 @@ a:focus-visible{outline:3px solid var(--orange);outline-offset:3px;border-radius
 /* ---------- footer ---------- */
 .site-foot{position:relative;overflow:hidden;background:var(--navy);color:#D5DAE8;padding:60px 0 0}
 .site-foot::before{content:"";position:absolute;left:0;bottom:0;width:180px;height:110px;background:var(--maroon);clip-path:polygon(0 0,100% 100%,0 100%);opacity:.9}
-.site-foot .cols{position:relative;z-index:2;display:grid;grid-template-columns:1.35fr 1fr .8fr 1.25fr;gap:40px}
+.site-foot .cols{position:relative;z-index:2;display:grid;grid-template-columns:1.5fr 1fr 1.3fr;gap:40px}
 .f-brand{display:flex;gap:16px;align-items:flex-start}
 .f-brand .disc-logo{flex:none;width:72px;height:72px;border-radius:50%;background:#fff;display:grid;place-items:center}
 .f-brand img{width:62px;height:62px}
