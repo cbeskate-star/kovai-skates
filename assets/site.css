@@ -177,7 +177,10 @@ a:focus-visible{outline:3px solid var(--orange);outline-offset:3px;border-radius
 .site-foot h2 svg{width:18px;height:18px}
 .site-foot address,.site-foot .lines{font-size:16px;line-height:1.6}
 .site-foot .lines a{display:block;text-decoration:none;color:#fff}
-.site-foot .lines a:hover,.mails dd a:hover,.insta:hover{text-decoration:underline}
+.site-foot .lines a:hover,.mails dd a:hover,.insta:hover,.social-link:hover{text-decoration:underline}
+.foot-social{display:flex;flex-direction:column;gap:10px;margin-top:14px}
+.social-link{display:inline-flex;align-items:center;gap:8px;color:#fff;text-decoration:none;font-size:15px}
+.social-link svg{width:18px;height:18px;color:var(--orange);flex-shrink:0}
 .mails{display:grid;gap:10px}
 .mails dt{font-size:14px;color:#AEB5CB}
 .mails dd a{color:#fff;text-decoration:none;overflow-wrap:anywhere;font-size:16px}
