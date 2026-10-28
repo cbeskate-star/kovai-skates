@@ -1,0 +1,22 @@
+{
+  "name": "kovaiskate-website",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cbeskate-star/kovai-skates.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://github.com/cbeskate-star/kovai-skates#readme",
+  "description": "Coimbatore District Skating Association (CDSA) Website",
+  "devDependencies": {
+    "vite": "^8.3.5"
+  }
+}
