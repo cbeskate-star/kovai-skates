@@ -1,0 +1,577 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="36th Tamil Nadu State Roller Skating Championship 2026 · 31 October – 6 November 2026 · Pollachi, Coimbatore, Kinathukadavu, Ooty. For inquiries: +91 824 864 8123.">
+<meta property="og:title" content="36th Tamil Nadu State Roller Skating Championship 2026">
+<meta property="og:description" content="31 October – 6 November 2026 · Pollachi, Coimbatore, Kinathukadavu, Ooty. Schedule, venues and inquiries: +91 824 864 8123.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://www.kovaiskate.com/assets/event/og-event.jpg">
+<meta property="og:url" content="https://www.kovaiskate.com/tn-championship-2026.html">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png">
+<title>36th TN State Roller Skating Championship</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Noto+Serif+Tamil:wght@700&family=Poppins:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: a phone-first event card reached from the memento's QR. Inquiry pointer first, then the navy title band,
+   the track, three event facts and a vertical day-by-day timeline. Single committed look matching the print collateral. */
+:root {
+  --navy: #0D1F4F;
+  --navy-deep: #081537;
+  --navy-soft: #172B66;
+  --paper: #FAF6EA;
+  --card: #FFFFFF;
+  --ink: #13214F;
+  --muted: #545D7E;
+  --line: #E6DCC4;
+  --orange: #F0892B;
+  --orange-light: #F6A85C;
+  --orange-ink: #AD4E0C;
+  --orange-tint: #FBE6CF;
+  --gold: #CAA24A;
+  --gold-soft: #E8D08F;
+  --on-navy: #F7F2E4;
+  --on-navy-muted: #BCC3DC;
+  --navy-line: rgba(232, 208, 143, 0.32);
+
+  --font-display: 'Lora', Georgia, 'Times New Roman', serif;
+  --font-body: 'Poppins', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-tamil: 'Noto Serif Tamil', 'Lora', Georgia, serif;
+  color-scheme: light;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { background: var(--paper); scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 400 16px/1.65 var(--font-body); -webkit-font-smoothing: antialiased; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--paper); }
+img { max-width: 100%; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; border-radius: 6px; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+[id] { scroll-margin-top: 24px; }
+
+.wrap {
+  max-width: 1080px; margin-inline: auto;
+  padding-left: max(20px, env(safe-area-inset-left, 0px));
+  padding-right: max(20px, env(safe-area-inset-right, 0px));
+}
+.band { padding-block: clamp(52px, 8vw, 96px); }
+.icon { width: 20px; height: 20px; flex-shrink: 0; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+
+.eyebrow {
+  display: flex; align-items: center; gap: 12px; margin: 0 0 14px;
+  font: 600 12px/1.4 var(--font-body); letter-spacing: 0.18em; text-transform: uppercase; color: var(--orange-ink);
+}
+.eyebrow::before { content: ""; width: 30px; height: 2px; background: var(--orange); flex-shrink: 0; }
+h2 { margin: 0 0 14px; font: 600 clamp(30px, 4.2vw, 44px)/1.12 var(--font-display); color: var(--ink); text-wrap: balance; }
+.lead { margin: 0; max-width: 60ch; font-size: 17px; color: var(--muted); }
+.section-head { margin-bottom: clamp(26px, 4vw, 40px); }
+
+/* Logos bar */
+.logos-bar { background: var(--paper); border-bottom: 1px solid var(--line); }
+.logos-row { display: flex; align-items: center; justify-content: center; gap: 14px; min-height: 72px; padding-block: 10px; }
+.logos-row img { display: block; height: 46px; width: auto; }
+.logos-row .wordmark { height: 36px; }
+
+/* Inquiry pointer */
+.inquiry { background: var(--orange); color: var(--navy); }
+.inq-row { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 10px 18px; padding-block: 16px; }
+.inq-pointer { display: inline-flex; align-items: center; gap: 10px; font: 600 15px/1.3 var(--font-body); }
+.inq-pointer .hand { width: 38px; height: 38px; border-radius: 50%; display: grid; place-items: center; background: var(--navy); color: var(--orange-light); }
+.inq-pointer .hand .icon { width: 22px; height: 22px; }
+@media (prefers-reduced-motion: no-preference) {
+  .inq-pointer .hand .icon { animation: nudge 1.6s ease-in-out infinite; }
+  @keyframes nudge { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(4px); } }
+}
+.inq-number {
+  font: 700 clamp(22px, 3.4vw, 28px)/1.2 var(--font-display); font-variant-numeric: lining-nums;
+  color: var(--navy); text-decoration: none; white-space: nowrap; user-select: all;
+}
+.inq-number:hover { text-decoration: underline; }
+.copy-btn {
+  display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0 16px; cursor: pointer;
+  border-radius: 999px; border: 1.5px solid var(--navy); background: transparent; color: var(--navy);
+  font: 600 14px/1 var(--font-body);
+}
+.copy-btn:hover { background: rgba(13, 31, 79, 0.1); }
+.copy-btn .icon { width: 16px; height: 16px; }
+
+/* Title band */
+.hero { position: relative; overflow: hidden; background: var(--navy); color: var(--on-navy); border-bottom: 4px solid var(--orange); }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.7fr); gap: 24px; align-items: end; padding-top: clamp(40px, 6vw, 72px); }
+.hero-copy { min-width: 0; padding-bottom: clamp(40px, 6vw, 72px); }
+.hero .eyebrow { color: var(--orange-light); }
+.hero h1 { margin: 6px 0 22px; font-family: var(--font-display); font-weight: 600; }
+.ordinal { display: block; font-weight: 700; font-size: clamp(88px, 13vw, 148px); line-height: 0.86; color: var(--gold-soft); letter-spacing: -0.02em; }
+.ordinal .th { display: inline-block; vertical-align: top; margin: 0.16em 0 0 0.05em; font-size: 0.3em; line-height: 1; font-style: italic; color: var(--orange-light); letter-spacing: 0; }
+.h1-line { display: block; margin-top: 16px; max-width: 17ch; font-size: clamp(30px, 4.4vw, 50px); line-height: 1.1; text-wrap: balance; }
+.h1-year { display: block; font-size: clamp(30px, 4.4vw, 50px); line-height: 1.15; font-style: italic; font-weight: 500; color: var(--orange-light); }
+.hero-dates { margin: 0; font: 600 clamp(19px, 2.2vw, 23px)/1.4 var(--font-display); }
+.hero-places { margin: 6px 0 0; font-size: 13px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--on-navy-muted); }
+.countdown { display: inline-grid; gap: 10px; margin-top: 28px; padding: 16px 22px 18px; border: 1px solid var(--navy-line); border-radius: 14px; background: var(--navy-deep); }
+.cd-label { margin: 0; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-soft); }
+.cd-units { display: flex; gap: 22px; }
+.cd-unit { display: grid; justify-items: start; }
+.cd-unit b { font: 700 38px/1 var(--font-display); font-variant-numeric: tabular-nums lining-nums; color: var(--on-navy); min-width: 2ch; }
+.cd-unit span { font-size: 12px; color: var(--on-navy-muted); }
+.cd-status { margin: 0; max-width: 34ch; font: 600 18px/1.45 var(--font-display); }
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; padding: 0 24px;
+  margin-top: 28px; border-radius: 999px; background: var(--orange); color: var(--navy);
+  font: 600 15px/1 var(--font-body); text-decoration: none;
+}
+.btn:hover { background: var(--orange-light); }
+.hero-mascot { position: relative; margin: 0; display: flex; flex-direction: column; align-items: center; min-width: 0; }
+.hero-mascot::before {
+  content: ""; position: absolute; left: 4%; right: 4%; top: 14%; aspect-ratio: 1; border-radius: 50%;
+  background: radial-gradient(circle, rgba(240, 137, 43, 0.42) 0%, rgba(240, 137, 43, 0) 66%);
+}
+.hero-mascot img { position: relative; display: block; height: clamp(320px, 42vw, 520px); width: auto; max-width: 100%; object-fit: contain; filter: drop-shadow(0 18px 28px rgba(0, 0, 0, 0.35)); }
+.hero-mascot figcaption { position: relative; display: grid; justify-items: center; gap: 2px; padding: 10px 0 18px; text-align: center; }
+.hero-mascot .ta { font: 700 17px/1.4 var(--font-tamil); color: var(--gold-soft); }
+.hero-mascot small { font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--on-navy-muted); }
+@media (max-width: 820px) {
+  .hero-grid { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+  .hero-copy { padding-bottom: 0; }
+  .hero-mascot img { height: 320px; }
+}
+@media (max-width: 420px) { .cd-units { gap: 16px; } .cd-unit b { font-size: 32px; } .btn { width: 100%; } }
+
+/* Track photo */
+.track { margin: 0; background: var(--navy-deep); }
+.track img { display: block; width: 100%; height: clamp(220px, 38vw, 460px); object-fit: cover; object-position: 50% 45%; }
+.track figcaption { padding-block: 12px; font-size: 13.5px; color: var(--on-navy-muted); }
+
+/* Event details */
+.facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.fact { padding: 22px 24px; background: var(--card); border: 1px solid var(--line); border-radius: 16px; min-width: 0; }
+.fact h3 { margin: 0 0 8px; font-size: 11.5px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--orange-ink); }
+.fact p { margin: 0; font: 600 20px/1.35 var(--font-display); }
+.fact small { display: block; margin-top: 6px; font-size: 14px; color: var(--muted); }
+@media (max-width: 820px) { .facts { grid-template-columns: minmax(0, 1fr); } }
+
+.venues { margin-top: clamp(32px, 5vw, 48px); }
+.venues h3 { margin: 0 0 12px; font: 600 24px/1.3 var(--font-display); }
+.venue-list { list-style: none; margin: 0; padding: 0; background: var(--card); border: 1px solid var(--line); border-radius: 16px; }
+.venue { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px 20px; align-items: center; padding: 16px 22px; border-top: 1px solid var(--line); }
+.venue:first-child { border-top: 0; }
+.venue b { display: block; font-weight: 600; line-height: 1.4; }
+.venue .town { font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--orange-ink); }
+.venue .what { display: block; font-size: 14px; color: var(--muted); }
+.map-link { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; font-size: 14px; font-weight: 600; color: var(--orange-ink); text-decoration: none; white-space: nowrap; }
+.map-link:hover { text-decoration: underline; }
+.map-link .icon { width: 16px; height: 16px; }
+@media (max-width: 560px) { .venue { grid-template-columns: minmax(0, 1fr); } }
+
+/* Timeline */
+.schedule { background: var(--card); }
+.timeline { list-style: none; margin: 0; padding: 0; display: grid; }
+.tl-day { position: relative; display: grid; grid-template-columns: 84px 28px minmax(0, 1fr); gap: 0 14px; }
+.tl-date { padding-top: 14px; text-align: right; }
+.tl-date .dow { display: block; font-size: 11.5px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+.tl-date .dnum { display: block; font: 700 36px/1 var(--font-display); font-variant-numeric: lining-nums; color: var(--ink); }
+.tl-date .mon { display: block; font-size: 12.5px; color: var(--muted); }
+.tl-rail { position: relative; display: flex; justify-content: center; }
+.tl-rail::before { content: ""; position: absolute; top: 0; bottom: 0; width: 2px; background: var(--line); }
+.tl-day:first-child .tl-rail::before { top: 26px; }
+.tl-day:last-child .tl-rail::before { bottom: auto; height: 26px; }
+.tl-node { position: relative; margin-top: 20px; width: 16px; height: 16px; border-radius: 50%; background: var(--card); border: 3px solid var(--orange); }
+.tl-day.is-today .tl-node { background: var(--orange); box-shadow: 0 0 0 5px var(--orange-tint); }
+.tl-body { padding: 12px 0 26px; min-width: 0; }
+.tl-tag { display: inline-block; margin-bottom: 8px; font-size: 11.5px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+.tl-day.is-today .tl-tag { color: var(--orange-ink); }
+.tl-events { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.tl-event { display: grid; grid-template-columns: 118px minmax(0, 1fr); gap: 12px; align-items: start; padding: 12px 14px; border-radius: 12px; background: var(--paper); }
+.chip { justify-self: start; padding: 6px 10px; border-radius: 999px; font: 600 11px/1.2 var(--font-body); letter-spacing: 0.1em; text-transform: uppercase; white-space: nowrap; }
+.chip.comp { background: var(--orange); color: var(--navy); }
+.chip.rep { background: var(--orange-tint); color: var(--orange-ink); box-shadow: inset 0 0 0 1px #E9C59A; }
+.chip.ina { background: var(--navy); color: var(--gold-soft); }
+.ev-name { display: block; font-weight: 600; line-height: 1.4; }
+.ev-venue { display: block; font-size: 14px; color: var(--muted); }
+@media (max-width: 560px) {
+  .tl-day { grid-template-columns: 52px 22px minmax(0, 1fr); gap: 0 10px; }
+  .tl-date .dnum { font-size: 28px; }
+  .tl-event { grid-template-columns: minmax(0, 1fr); gap: 6px; }
+}
+
+/* Sponsors */
+.sponsor-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; list-style: none; margin: 0; padding: 0; }
+.sponsor { height: 160px; display: grid; place-items: center; gap: 6px; padding: 20px 24px; text-align: center; background: var(--card); border: 1px solid var(--line); border-radius: 16px; text-decoration: none; color: var(--ink); }
+.sponsor img { display: block; width: auto; height: auto; max-width: min(100%, 230px); max-height: 88px; object-fit: contain; }
+.sponsor .s-name { font-size: 13px; font-weight: 600; }
+a.sponsor:hover { border-color: var(--orange); }
+.sponsor.empty { background: transparent; border: 1.5px dashed #D6C59C; color: var(--muted); font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; }
+@media (max-width: 640px) { .sponsor-grid { grid-template-columns: minmax(0, 1fr); gap: 12px; } .sponsor { height: 128px; } .sponsor img { max-height: 76px; } }
+
+/* Social links */
+.socials { margin-top: 32px; }
+.socials small { font-size: 11.5px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold-soft); }
+.social-list { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; margin: 12px 0 0; padding: 0; }
+.social { display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 20px 0 16px; border-radius: 999px; border: 1px solid var(--gold-soft); background: var(--navy-soft); color: var(--on-navy); text-decoration: none; font: 600 15px/1.2 var(--font-body); }
+a.social:hover { background: var(--navy); border-color: var(--orange-light); }
+.social .handle { font-weight: 500; color: var(--gold-soft); }
+.social .go { width: 16px; height: 16px; color: var(--on-navy-muted); }
+.social.empty { border-style: dashed; color: var(--on-navy-muted); font-weight: 500; }
+.social .icon { width: 18px; height: 18px; }
+
+/* Footer */
+.site-foot { background: var(--navy-deep); color: var(--on-navy); padding-block: clamp(44px, 7vw, 72px) 32px; }
+.foot-grid { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px 40px; }
+.foot-title { margin: 0; font: 600 clamp(22px, 3vw, 28px)/1.3 var(--font-display); max-width: 24ch; text-wrap: balance; }
+.foot-title span { display: block; margin-top: 6px; font: 500 14px/1.4 var(--font-body); color: var(--on-navy-muted); }
+.foot-inq { display: grid; gap: 4px; }
+.foot-inq small { font-size: 11.5px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold-soft); }
+.foot-inq a { font: 700 26px/1.2 var(--font-display); color: var(--on-navy); text-decoration: none; white-space: nowrap; user-select: all; }
+.foot-inq a:hover { text-decoration: underline; }
+.logo-chip { display: inline-flex; align-items: center; gap: 14px; margin-top: 32px; padding: 12px 18px; border-radius: 16px; background: var(--paper); }
+.logo-chip img { display: block; height: 48px; width: auto; }
+.logo-chip .wordmark { height: 38px; }
+.thanks { margin: 28px 0 0; padding-top: 22px; border-top: 1px solid var(--navy-line); font: italic 500 17px/1.5 var(--font-display); color: var(--gold-soft); }
+</style>
+
+</head>
+<body>
+<header class="logos-bar">
+  <div class="wrap logos-row">
+    <a href="index.html" style="display:block" title="Coimbatore District Skating Association website"><img src="assets/event/cdsa-logo.webp" alt="Coimbatore District Skating Association, home page" width="360" height="355"></a>
+    <img src="assets/event/tnrsa-logo.webp" alt="Tamil Nadu Roller Skating Association" width="360" height="352">
+    <img src="assets/event/tn-skate-wordmark.webp" alt="Tamil Nadu Skate" class="wordmark" width="520" height="248">
+  </div>
+</header>
+
+<aside class="inquiry" aria-label="Inquiries">
+  <div class="wrap inq-row">
+    <span class="inq-pointer">
+      <span class="hand" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M4 12h14"/><path d="M13 6l6 6-6 6"/></svg></span>
+      For inquiries, contact
+    </span>
+    <a class="inq-number" id="phone-top" href="tel:+918248648123">+91 824 864 8123</a>
+    <button type="button" class="copy-btn" data-copy="+91 824 864 8123" data-target="phone-top"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 012-2h8"/></svg><span class="copy-label">Copy</span><span class="sr-only"> phone number</span></button>
+  </div>
+</aside>
+
+<main>
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Tamil Nadu Skate · 2026</p>
+        <h1 id="hero-title">
+          <span class="ordinal">36<span class="th">th</span></span>
+          <span class="h1-line">Tamil Nadu State Roller Skating Championship</span>
+          <span class="h1-year">2026</span>
+        </h1>
+        <p class="hero-dates">31 October – 6 November 2026</p>
+        <p class="hero-places">Pollachi · Coimbatore · Kinathukadavu · Ooty</p>
+        <div class="countdown">
+          <p class="cd-label" id="cd-label">Inauguration in · Sat 31 Oct · 5:00 PM · Pollachi</p>
+          <div class="cd-units" id="cd-units">
+            <div class="cd-unit"><b id="cd-d">00</b><span>days</span></div>
+            <div class="cd-unit"><b id="cd-h">00</b><span>hours</span></div>
+            <div class="cd-unit"><b id="cd-m">00</b><span>minutes</span></div>
+          </div>
+          <p class="cd-status" id="cd-status" hidden></p>
+        </div>
+        <div><a class="btn" href="#schedule">See the schedule</a></div>
+      </div>
+      <figure class="hero-mascot">
+        <img src="assets/event/mascot.webp" alt="Arasan Vetrivelan, the official mascot, skating on inline skates" width="700" height="1292">
+        <figcaption><span class="ta" lang="ta">அரசன் வெற்றிவேலன்!</span><small>Official mascot</small></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <figure class="track">
+    <img src="assets/event/pollachi-track.webp" alt="The blue skating track and green infield of the Pollachi rink, ringed by floodlights and coconut palms" width="2000" height="701">
+    <figcaption class="wrap">Pollachi International Speed Skating Rink, home of Speed Skating and the inauguration.</figcaption>
+  </figure>
+
+  <section class="band" aria-labelledby="details-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">About the event</p>
+        <h2 id="details-title">Event details</h2>
+      </div>
+      <div class="facts">
+        <div class="fact"><h3>Dates</h3><p>31 Oct – 6 Nov 2026</p><small>Reporting from 30 October</small></div>
+        <div class="fact"><h3>Inauguration</h3><p>Sat 31 Oct · 5:00 – 7:00 PM</p><small>Pollachi International Speed Skating Rink</small></div>
+        <div class="fact"><h3>Host towns</h3><p>Pollachi · Kinathukadavu · Coimbatore · Ooty</p><small>Eight disciplines across five venues</small></div>
+      </div>
+      <div class="venues">
+        <h3>Venues</h3>
+        <ul class="venue-list" id="venue-list"></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="band schedule" id="schedule" aria-labelledby="schedule-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Championship programme</p>
+        <h2 id="schedule-title">Schedule timeline</h2>
+        <p class="lead">Day by day, from the first reporting day to the final day of Speed Skating.</p>
+      </div>
+      <ol class="timeline" id="timeline"></ol>
+    </div>
+  </section>
+
+  <section class="band" id="sponsors" aria-labelledby="sponsors-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">With thanks to</p>
+        <h2 id="sponsors-title">Event sponsors</h2>
+      </div>
+      <!-- Sponsor logos are filled from the SPONSORS list at the top of the script below. -->
+      <ul class="sponsor-grid" id="sponsor-grid"></ul>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <p class="foot-title">36th Tamil Nadu State Roller Skating Championship 2026<span>31 October – 6 November 2026</span></p>
+      <div class="foot-inq">
+        <small>For inquiries</small>
+        <a id="phone-foot" href="tel:+918248648123">+91 824 864 8123</a>
+      </div>
+    </div>
+    <div class="socials">
+      <small>Follow us on Instagram</small>
+      <!-- Social links are filled from the SOCIALS list at the top of the script below. -->
+      <ul class="social-list" id="social-list"></ul>
+    </div>
+    <div class="logo-chip">
+      <img src="assets/event/cdsa-logo.webp" alt="Coimbatore District Skating Association" width="360" height="355">
+      <img src="assets/event/tnrsa-logo.webp" alt="Tamil Nadu Roller Skating Association" width="360" height="352">
+      <img src="assets/event/tn-skate-wordmark.webp" alt="Tamil Nadu Skate" class="wordmark" width="520" height="248">
+    </div>
+    <p class="thanks">Thank you for supporting youth athletics and sporting excellence in Tamil Nadu.</p>
+    <p style="margin-top:18px;font-size:15px"><a href="index.html" style="color:var(--gold-soft)">Coimbatore District Skating Association website</a></p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  // ===== EDIT HERE: event sponsors =====
+  // Shown in this order. To add one: { name: "Brand name", logo: "assets/brand-logo.png", url: "https://www.brand.com" } (url is optional).
+  var SPONSORS = [
+    { name: "Amutha Surabhi", logo: "assets/event/sponsors/amutha-surabhi.webp" },
+    { name: "ACT Fibernet", logo: "assets/event/sponsors/act-fibernet.webp" },
+    { name: "Bont", logo: "assets/event/sponsors/bont.webp" }
+  ];
+  var SPONSOR_SLOTS = 0; // set above 0 to show empty "Sponsor logo" placeholders
+
+  // ===== EDIT HERE: social media =====
+  // Shown in this order. Entries without a url show as "coming soon".
+  var SOCIALS = [
+    { name: "CDSA", handle: "@coimbatore_skate", url: "https://www.instagram.com/coimbatore_skate/" },
+    { name: "PDRSA", handle: "@pdrsapollachi2022", url: "https://www.instagram.com/pdrsapollachi2022/" }
+  ];
+
+  var DAYS = [
+    { iso: '2026-10-30', dow: 'Fri', d: '30', m: 'Oct' },
+    { iso: '2026-10-31', dow: 'Sat', d: '31', m: 'Oct' },
+    { iso: '2026-11-01', dow: 'Sun', d: '01', m: 'Nov' },
+    { iso: '2026-11-02', dow: 'Mon', d: '02', m: 'Nov' },
+    { iso: '2026-11-03', dow: 'Tue', d: '03', m: 'Nov' },
+    { iso: '2026-11-04', dow: 'Wed', d: '04', m: 'Nov' },
+    { iso: '2026-11-05', dow: 'Thu', d: '05', m: 'Nov' },
+    { iso: '2026-11-06', dow: 'Fri', d: '06', m: 'Nov' }
+  ];
+
+  // From the official championship programme.
+  var EVENTS = [
+    { id: 'inaug', name: 'Inauguration ceremony', venue: 'Pollachi International Speed Skating Rink, Pollachi', ina: true, day: '2026-10-31', time: '5:00 – 7:00 PM' },
+    { id: 'speed', name: 'Speed Skating · Quad & Inline', venue: 'Pollachi International Speed Skating Rink, Pollachi', rep: '2026-10-31', comp: ['2026-11-01', '2026-11-06'] },
+    { id: 'artistic', name: 'Artistic Skating', venue: 'VOC Rink, Coimbatore', rep: '2026-10-30', comp: ['2026-10-31', '2026-11-01'] },
+    { id: 'alpine', name: 'Alpine & Downhill', venue: 'Muthumalai Murugan Temple, Kinathukadavu', rep: '2026-11-03', comp: ['2026-11-04', '2026-11-05'] },
+    { id: 'ooty', name: 'Skateboarding, Roller Freestyle & Roller Scooter', venue: 'Ooty Government Skate Park, Ooty', rep: '2026-10-30', comp: ['2026-10-31', '2026-10-31'] },
+    { id: 'inline', name: 'Inline Freestyle', venue: 'VOC Park, Coimbatore', rep: '2026-11-01', comp: ['2026-11-02', '2026-11-02'] },
+    { id: 'derby', name: 'Roller Derby', venue: 'VOC Park, Coimbatore', rep: '2026-11-02', comp: ['2026-11-03', '2026-11-05'] }
+  ];
+
+  var VENUES = [
+    { name: 'Pollachi International Speed Skating Rink', town: 'Pollachi', what: 'Inauguration · Speed Skating' },
+    { name: 'Muthumalai Murugan Temple', town: 'Kinathukadavu', what: 'Alpine & Downhill' },
+    { name: 'VOC Rink', town: 'Coimbatore', what: 'Artistic Skating' },
+    { name: 'VOC Park', town: 'Coimbatore', what: 'Inline Freestyle · Roller Derby' },
+    { name: 'Ooty Government Skate Park', town: 'Ooty', what: 'Skateboarding · Roller Freestyle · Roller Scooter' }
+  ];
+
+  function el(tag, cls, text) {
+    var n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (text != null) n.textContent = text;
+    return n;
+  }
+  function pad(n) { return (n < 10 ? '0' : '') + n; }
+  function istIso(ms) {
+    var t = new Date(ms + 330 * 60000);
+    return t.getUTCFullYear() + '-' + pad(t.getUTCMonth() + 1) + '-' + pad(t.getUTCDate());
+  }
+  function statusOf(ev, iso) {
+    if (ev.ina) return iso === ev.day ? 'ina' : null;
+    if (ev.rep === iso) return 'rep';
+    if (iso >= ev.comp[0] && iso <= ev.comp[1]) return 'comp';
+    return null;
+  }
+
+  // Venues
+  var vl = document.getElementById('venue-list');
+  VENUES.forEach(function (v) {
+    var li = el('li', 'venue');
+    var txt = el('div');
+    txt.appendChild(el('span', 'town', v.town));
+    txt.appendChild(el('b', null, v.name));
+    txt.appendChild(el('span', 'what', v.what));
+    li.appendChild(txt);
+    var a = el('a', 'map-link');
+    a.href = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(v.name + ', ' + v.town + ', Tamil Nadu');
+    a.target = '_blank';
+    a.rel = 'noopener';
+    a.appendChild(document.createTextNode('Directions'));
+    a.insertAdjacentHTML('beforeend', '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5"/></svg>');
+    li.appendChild(a);
+    vl.appendChild(li);
+  });
+
+  // Timeline
+  var today = istIso(Date.now());
+  var tl = document.getElementById('timeline');
+  var order = { ina: 0, comp: 1, rep: 2 };
+  var CHIP = { ina: 'Inauguration', comp: 'Competition', rep: 'Reporting' };
+  DAYS.forEach(function (day, i) {
+    var li = el('li', 'tl-day' + (day.iso === today ? ' is-today' : ''));
+    var date = el('div', 'tl-date');
+    date.appendChild(el('span', 'dow', day.dow));
+    date.appendChild(el('span', 'dnum', day.d));
+    date.appendChild(el('span', 'mon', day.m + ' 2026'));
+    li.appendChild(date);
+    var rail = el('div', 'tl-rail');
+    rail.setAttribute('aria-hidden', 'true');
+    rail.appendChild(el('span', 'tl-node'));
+    li.appendChild(rail);
+
+    var body = el('div', 'tl-body');
+    var tag = day.iso === today ? 'Today · Day ' + (i + 1) : 'Day ' + (i + 1);
+    if (i === DAYS.length - 1) tag += ' · Final day';
+    body.appendChild(el('span', 'tl-tag', tag));
+    var items = [];
+    EVENTS.forEach(function (ev) { var s = statusOf(ev, day.iso); if (s) items.push({ ev: ev, s: s }); });
+    items.sort(function (a, b) { return order[a.s] - order[b.s]; });
+    var ul = el('ul', 'tl-events');
+    items.forEach(function (it) {
+      var row = el('li', 'tl-event');
+      row.appendChild(el('span', 'chip ' + it.s, CHIP[it.s]));
+      var t = el('div');
+      t.appendChild(el('span', 'ev-name', it.ev.name));
+      t.appendChild(el('span', 'ev-venue', it.ev.venue + (it.s === 'ina' ? ' · ' + it.ev.time : '')));
+      row.appendChild(t);
+      ul.appendChild(row);
+    });
+    body.appendChild(ul);
+    li.appendChild(body);
+    tl.appendChild(li);
+  });
+
+  // Sponsors
+  var sg = document.getElementById('sponsor-grid');
+  var slots = Math.max(SPONSOR_SLOTS, SPONSORS.length);
+  for (var si = 0; si < slots; si++) {
+    var sp = SPONSORS[si];
+    var cell = el('li');
+    if (sp && (sp.logo || sp.name)) {
+      var box = el(sp.url ? 'a' : 'div', 'sponsor');
+      if (sp.url) { box.href = sp.url; box.target = '_blank'; box.rel = 'noopener'; }
+      if (sp.logo) {
+        var img = el('img');
+        img.src = sp.logo;
+        img.alt = sp.name || 'Sponsor';
+        box.appendChild(img);
+      } else {
+        box.appendChild(el('span', 's-name', sp.name));
+      }
+      cell.appendChild(box);
+    } else {
+      cell.appendChild(el('div', 'sponsor empty', 'Sponsor logo'));
+    }
+    sg.appendChild(cell);
+  }
+
+  // Social links
+  var sl = document.getElementById('social-list');
+  var AT = '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M16 8v5a3 3 0 006 0v-1a10 10 0 10-3.9 7.9"/></svg>';
+  SOCIALS.forEach(function (s) {
+    var li = el('li');
+    if (s.url) {
+      var a = el('a', 'social');
+      a.href = s.url; a.target = '_blank'; a.rel = 'noopener';
+      a.setAttribute('aria-label', s.name + ' on Instagram, ' + s.handle + ' (opens Instagram)');
+      a.insertAdjacentHTML('beforeend', AT);
+      a.appendChild(document.createTextNode(s.name));
+      if (s.handle) a.appendChild(el('span', 'handle', s.handle));
+      a.insertAdjacentHTML('beforeend', '<svg class="icon go" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5"/></svg>');
+      li.appendChild(a);
+    } else {
+      var span = el('span', 'social empty');
+      span.insertAdjacentHTML('beforeend', AT);
+      span.appendChild(document.createTextNode(s.name + ' · coming soon'));
+      li.appendChild(span);
+    }
+    sl.appendChild(li);
+  });
+
+  // Countdown (IST, UTC+05:30)
+  var START = Date.UTC(2026, 9, 31, 11, 30); // 31 Oct 2026, 5:00 PM IST
+  var END = Date.UTC(2026, 10, 6, 18, 30);   // end of 6 Nov 2026 IST
+  var units = document.getElementById('cd-units');
+  var status = document.getElementById('cd-status');
+  var label = document.getElementById('cd-label');
+  function tick() {
+    var now = Date.now();
+    if (now < START) {
+      var s = Math.floor((START - now) / 1000);
+      var d = Math.floor(s / 86400); s -= d * 86400;
+      var h = Math.floor(s / 3600); s -= h * 3600;
+      var m = Math.floor(s / 60);
+      document.getElementById('cd-d').textContent = pad(d);
+      document.getElementById('cd-h').textContent = pad(h);
+      document.getElementById('cd-m').textContent = pad(m);
+      units.hidden = false; status.hidden = true;
+    } else if (now < END) {
+      units.hidden = true; status.hidden = false;
+      label.textContent = 'Live now · 31 Oct – 6 Nov 2026';
+      status.textContent = 'The championship is under way. Today’s events are marked in the schedule.';
+    } else {
+      units.hidden = true; status.hidden = false;
+      label.textContent = '31 Oct – 6 Nov 2026';
+      status.textContent = 'The 36th championship has concluded. Thank you to every skater, family and official.';
+    }
+  }
+  tick();
+  setInterval(tick, 30000);
+
+  // Copy button
+  document.querySelectorAll('[data-copy]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var lab = btn.querySelector('.copy-label');
+      function flash(msg) { lab.textContent = msg; setTimeout(function () { lab.textContent = 'Copy'; }, 1800); }
+      function fallback() {
+        var target = document.getElementById(btn.getAttribute('data-target'));
+        if (!target) return;
+        var r = document.createRange(); r.selectNodeContents(target);
+        var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r);
+        flash('Selected');
+      }
+      try { navigator.clipboard.writeText(btn.getAttribute('data-copy')).then(function () { flash('Copied'); }, fallback); }
+      catch (e) { fallback(); }
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
