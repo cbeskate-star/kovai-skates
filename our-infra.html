@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Our Infrastructure | Coimbatore District Skating Association</title>
+  <meta name="description"
+    content="Explore the skating rinks and training facilities of Coimbatore District Skating Association, including VOC Park Skating Rink and Gandhi Park Skating Rink.">
+  <meta property="og:site_name" content="Coimbatore District Skating Association">
+  <meta property="og:title" content="Our Infrastructure | Coimbatore District Skating Association">
+  <meta property="og:description"
+    content="Explore the skating rinks and training facilities of Coimbatore District Skating Association, including VOC Park Skating Rink and Gandhi Park Skating Rink.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.kovaiskate.com/our-infra.html">
+  <meta property="og:image" content="https://www.kovaiskate.com/assets/og-image.jpg">
+  <meta name="theme-color" content="#1C2541">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/site.css">
+  <style>
+    .infra-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 32px;
+      margin-top: 40px;
+    }
+    .infra-card {
+      background: #fff;
+      border: 2px solid var(--line);
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 18px rgba(28, 37, 65, 0.04);
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .infra-card:hover {
+      border-color: var(--orange);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 26px rgba(28, 37, 65, 0.09);
+    }
+    .infra-card-header {
+      padding: 24px 28px 18px;
+      background: linear-gradient(180deg, #FAFAFD 0%, #FFFFFF 100%);
+      border-bottom: 1px solid var(--line);
+    }
+    .infra-tag {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 4px;
+      background: var(--navy);
+      color: #fff;
+      margin-bottom: 12px;
+    }
+    .infra-tag.popular {
+      background: var(--maroon);
+    }
+    .infra-card-header h2 {
+      font-size: 28px;
+      color: var(--navy);
+      line-height: 1.2;
+      margin: 0;
+    }
+    .infra-location {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 8px;
+      font-size: 15px;
+      color: var(--muted);
+      font-weight: 500;
+    }
+    .infra-location svg {
+      width: 17px;
+      height: 17px;
+      color: var(--orange);
+      flex-shrink: 0;
+    }
+    .infra-card-body {
+      padding: 24px 28px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .infra-desc {
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--ink);
+      margin: 0;
+    }
+    .infra-specs {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      background: var(--mist);
+      padding: 16px 18px;
+      border-radius: 8px;
+    }
+    .spec-item dt {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+    }
+    .spec-item dd {
+      margin: 4px 0 0;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--navy);
+    }
+    .infra-features {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 10px;
+    }
+    .infra-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 15px;
+      line-height: 1.45;
+    }
+    .infra-features svg {
+      width: 18px;
+      height: 18px;
+      color: var(--orange);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .infra-card-footer {
+      padding: 18px 28px 24px;
+      border-top: 1px solid var(--line);
+      background: #FAFAFD;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .map-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--navy);
+      color: #fff;
+      font-family: 'Barlow Condensed', 'Barlow', sans-serif;
+      font-weight: 600;
+      font-size: 18px;
+      letter-spacing: 0.03em;
+      padding: 10px 22px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.15s ease, transform 0.15s ease;
+      width: 100%;
+    }
+    .map-btn:hover {
+      background: var(--maroon);
+      color: #fff;
+      text-decoration: none;
+      transform: translateY(-1px);
+    }
+    .map-btn svg {
+      width: 19px;
+      height: 19px;
+      color: var(--orange);
+    }
+    .guidelines-box {
+      margin-top: 50px;
+      background: #fff;
+      border: 2px solid var(--line);
+      border-radius: 12px;
+      padding: 32px;
+      border-left: 6px solid var(--orange);
+    }
+    .guidelines-box h3 {
+      font-size: 24px;
+      color: var(--navy);
+      margin: 0 0 12px;
+    }
+    .guidelines-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+      margin-top: 20px;
+    }
+    .guideline-item b {
+      display: block;
+      color: var(--navy);
+      font-size: 16px;
+      margin-bottom: 4px;
+    }
+    .guideline-item p {
+      margin: 0;
+      font-size: 14.5px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    @media (max-width: 860px) {
+      .infra-grid {
+        grid-template-columns: 1fr;
+      }
+      .guidelines-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="announce" id="announce">
+    <div class="wrap">
+      <span id="announce-text">CDSA hosts the 36th Tamil Nadu State Roller Skating Championship, 31 Oct to 6 Nov
+        2026.</span>
+      <a id="announce-link" href="36th-TN-Skating-Championship.html">Schedule and venues</a>
+    </div>
+  </div>
+  <header class="site-head">
+    <div class="wrap">
+      <div class="bar">
+        <a class="brand" href="index.html">
+          <img src="assets/cdsa-logo-160.webp" alt="" width="60" height="60">
+          <span>
+            <strong>Coimbatore District Skating Association</strong>
+            <small>Affiliated to Tamilnadu Roller Skating Association</small>
+          </span>
+        </a>
+        <nav class="main-nav" aria-label="Main menu">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="events.html">Events &amp; Results</a>
+          <a href="our-infra.html" aria-current="page">Our Infra</a>
+          <a href="36th-TN-Skating-Championship.html">36th-TN-Skating-Championship</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main id="main">
+    <header class="band">
+      <div class="wrap">
+        <h1>Our Infrastructure</h1>
+        <p>Quality roller skating rinks and dedicated training tracks powering athletes across Coimbatore district.</p>
+      </div>
+      <div class="slash" aria-hidden="true"></div>
+    </header>
+
+    <section class="sec">
+      <div class="wrap">
+        <div class="intro" style="grid-template-columns: 1fr; margin-bottom: 20px;">
+          <div>
+            <h2>World-Class Training Grounds in Kovai</h2>
+            <p class="lead">Coimbatore boasts some of the finest public roller sports infrastructure in Tamil Nadu. Managed in collaboration with municipal bodies and sports institutions, our rinks provide safe, high-speed surfaces where grassroots beginners grow into state champions and national medalists.</p>
+          </div>
+        </div>
+
+        <div class="infra-grid">
+          <!-- VOC Skating Rink -->
+          <article class="infra-card">
+            <div class="infra-card-header">
+              <span class="infra-tag popular">Premier Competitive Hub</span>
+              <h2>VOC Skating Rink</h2>
+              <div class="infra-location">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/>
+                </svg>
+                <span>VOC Park Grounds, Gopalapuram, Coimbatore</span>
+              </div>
+            </div>
+            <div class="infra-card-body">
+              <p class="infra-desc">The VOC Park Skating Rink is Coimbatore's flagship roller skating stadium, situated centrally in the iconic VOC Park complex near Nehru Stadium and Gandhipuram. Built with professional banked turns and a specialized smooth finish, it is the primary battleground for district meets and selection trials.</p>
+              
+              <div class="infra-specs">
+                <div class="spec-item">
+                  <dt>Track Type</dt>
+                  <dd>Banked Speed Track</dd>
+                </div>
+                <div class="spec-item">
+                  <dt>Surface</dt>
+                  <dd>Synthetic Coated Cement</dd>
+                </div>
+                <div class="spec-item">
+                  <dt>Lighting</dt>
+                  <dd>High-Mast Floodlights</dd>
+                </div>
+                <div class="spec-item">
+                  <dt>Spectator Area</dt>
+                  <dd>Stepped Seating Gallery</dd>
+                </div>
+              </div>
+
+              <ul class="infra-features">
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span><strong>Speed &amp; Artistic Skating:</strong> Ideal for high-speed quad and inline racing, relay events, and artistic choreography.</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span><strong>District Championship Venue:</strong> Regular venue for CDSA official ranking championships and state team selection trials.</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span><strong>Active Coaching Batches:</strong> Daily morning (6:00 AM – 8:30 AM) and evening (5:00 PM – 8:00 PM) sessions under certified coaches.</span>
+                </li>
+              </ul>
+            </div>
+            <div class="infra-card-footer">
+              <a class="map-btn" href="https://maps.app.goo.gl/RdhFX2WgbyXSZjA27" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/>
+                </svg>
+                View on Google Maps
+              </a>
+            </div>
+          </article>
+
+          <!-- Gandhi Park Skating Rink -->
+          <article class="infra-card">
+            <div class="infra-card-header">
+              <span class="infra-tag">Grassroots &amp; Foundation Rink</span>
+              <h2>Gandhi Park Skating Rink</h2>
+              <div class="infra-location">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/>
+                </svg>
+                <span>Gandhi Park, Selvapuram / R.S. Puram, Coimbatore</span>
+              </div>
+            </div>
+            <div class="infra-card-body">
+              <p class="infra-desc">Located in the lush greenery of historic Gandhi Park serving western Coimbatore, this rink is the premier grass-roots nursery for young skaters. Equipped with a level flat track and protective fencing, it provides a safe, welcoming environment for toddlers and beginners building their balance.</p>
+              
+              <div class="infra-specs">
+                <div class="spec-item">
+                  <dt>Track Type</dt>
+                  <dd>Flat Training Rink</dd>
+                </div>
+                <div class="spec-item">
+                  <dt>Environment</dt>
+                  <dd>Public Park &amp; Play Zone</dd>
+                </div>
+                <div class="spec-item">
+                  <dt>Perimeter</dt>
+                  <dd>Safety Railings &amp; Mesh</dd>
+                </div>
+                <div class="spec-item">
+                  <dt>Accessibility</dt>
+                  <dd>Easy Access from R.S. Puram</dd>
+                </div>
+              </div>
+
+              <ul class="infra-features">
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span><strong>Beginner to Intermediate:</strong> Perfect ground for fundamental stance, crossover drills, stopping techniques, and speed control.</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span><strong>Safe Family Ambience:</strong> Parents enjoy walking tracks and shaded seating while monitoring young children during practice.</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span><strong>Feeder Nursery:</strong> Graduates smoothly advance to competitive banked tracks at VOC Park after mastering foundation skills.</span>
+                </li>
+              </ul>
+            </div>
+            <div class="infra-card-footer">
+              <a class="map-btn" href="https://maps.app.goo.gl/7zXHf42svNc9BA249" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/>
+                </svg>
+                View on Google Maps
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Guidelines / Information -->
+        <div class="guidelines-box">
+          <h3>Facility Guidelines &amp; Skater Safety</h3>
+          <p class="muted">To maintain athlete safety and surface longevity across all CDSA-affiliated rinks, skaters and parents are requested to adhere to standard rink protocols:</p>
+          <div class="guidelines-grid">
+            <div class="guideline-item">
+              <b>Mandatory Safety Gear</b>
+              <p>Helmets, knee guards, elbow guards, and wrist guards are required at all times on the rink during training sessions.</p>
+            </div>
+            <div class="guideline-item">
+              <b>Wheel Care &amp; Surface Protection</b>
+              <p>Skaters must ensure wheels and stoppers are clean of debris, rocks, and mud before entering the skating surface.</p>
+            </div>
+            <div class="guideline-item">
+              <b>Coaching Enquiries</b>
+              <p>For training registrations, batch timings, and coaching academy admissions, visit either rink during evening practice hours (5:30 PM – 7:30 PM).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-foot" id="contact">
+    <div class="wrap cols">
+      <div>
+        <div class="f-brand">
+          <span class="disc-logo"><img src="assets/cdsa-logo-160.webp" alt="" width="62" height="62"
+              loading="lazy"></span>
+          <div>
+            <strong>Coimbatore District Skating Association</strong>
+            <p>Affiliated to Tamilnadu Roller Skating Association<br>Regd. No. 302/2014</p>
+            <div class="foot-social">
+              <a class="social-link" href="https://www.instagram.com/kovai_skate?exln=NW94ZjhkMWJyaWh3" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>@kovai_skate on Instagram</a>
+              <a class="social-link" href="https://youtube.com/@kovaiskate?si=CBmjSjpFx-IH6knZ" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>@kovaiskate on YouTube</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z" />
+          </svg>Office</h2>
+        <address>#24, Texpark Road,<br>Civil Aerodrome Post,<br>Coimbatore 641014,<br>Tamil Nadu</address>
+      </div>
+
+      <div>
+        <h2><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 7.2L4.4 7H4v.4l8 5.6 8-5.6V7h-.4z" />
+          </svg>Email</h2>
+        <dl class="mails">
+          <div>
+            <dt>Secretariat</dt>
+            <dd><a href="mailto:cdsa.secretariat@kovaiskate.com">cdsa.secretariat@kovaiskate.com</a></dd>
+          </div>
+          <div>
+            <dt>President</dt>
+            <dd><a href="mailto:cdsa.president@kovaiskate.com">cdsa.president@kovaiskate.com</a></dd>
+          </div>
+          <div>
+            <dt>Office</dt>
+            <dd><a href="mailto:cdsa.office@kovaiskate.com">cdsa.office@kovaiskate.com</a></dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+    <div class="legal">
+      <div class="wrap">© 2026 Coimbatore District Skating Association</div>
+    </div>
+  </footer>
+  <script>
+    /* Announcement strip changes by itself before, during and after the championship (India time). */
+    (function () {
+      try {
+        var now = Date.now(), start = Date.UTC(2026, 9, 31, 11, 30), end = Date.UTC(2026, 10, 6, 18, 30), hide = Date.UTC(2026, 11, 31, 18, 30);
+        var bar = document.getElementById('announce'), t = document.getElementById('announce-text'), a = document.getElementById('announce-link');
+        if (!bar) return;
+        if (now >= hide) { bar.remove(); return; }
+        if (now >= end) { t.textContent = 'The 36th Tamil Nadu State Roller Skating Championship has concluded. Thank you to every skater, family and official.'; a.textContent = 'Results'; a.href = 'events.html#results'; }
+        else if (now >= start) { t.textContent = 'The 36th Tamil Nadu State Roller Skating Championship is on now.'; a.textContent = "See today's schedule"; a.href = '36th-TN-Skating-Championship.html#schedule'; }
+      } catch (e) { }
+    })();
+  </script>
+</body>
+
+</html>

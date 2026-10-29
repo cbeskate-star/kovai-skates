@@ -9,6 +9,7 @@ export default defineConfig({
         main: resolve(import.meta.dirname, 'index.html'),
         about: resolve(import.meta.dirname, 'about.html'),
         events: resolve(import.meta.dirname, 'events.html'),
+        infra: resolve(import.meta.dirname, 'our-infra.html'),
         championship: resolve(import.meta.dirname, '36th-TN-Skating-Championship.html'),
         tnChampionship: resolve(import.meta.dirname, 'tn-championship-2026.html'),
         notFound: resolve(import.meta.dirname, '404.html'),
