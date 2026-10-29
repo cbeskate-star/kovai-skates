@@ -395,8 +395,11 @@ h2 { margin: 0 0 14px; font: 600 clamp(30px, 4.2vw, 44px)/1.12 var(--font-displa
   justify-content: center;
   overflow: hidden;
   min-height: 0;
-  cursor: grab;
+  cursor: zoom-in;
   touch-action: none;
+}
+.lightbox-body.is-zoomed {
+  cursor: grab;
 }
 .lightbox-body.is-panning {
   cursor: grabbing;
@@ -634,7 +637,7 @@ a.social:hover { background: var(--navy); border-color: var(--orange-light); }
       <div class="layouts-grid">
         <figure class="layout-card">
           <div class="layout-thumb-wrap" role="button" tabindex="0" aria-label="Open Track Event Map in full screen" data-full="assets/pollachi-track-event-map.jpg" data-title="Track Event Map – Pollachi International Speed Skating Rink">
-            <img src="assets/pollachi-track-event-map.jpg" alt="Track Event Map - Pollachi International Speed Skating Rink" loading="lazy" width="1024" height="600">
+            <img src="assets/pollachi-track-event-map.jpg" alt="Track Event Map - Pollachi International Speed Skating Rink" loading="lazy" width="1414" height="1000">
             <span class="layout-zoom-badge">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
               View Full Screen
@@ -648,7 +651,7 @@ a.social:hover { background: var(--navy); border-color: var(--orange-light); }
 
         <figure class="layout-card">
           <div class="layout-thumb-wrap" role="button" tabindex="0" aria-label="Open Road Map in full screen" data-full="assets/pollachi-road-map.jpg" data-title="Road Map – Pollachi International Speed Skating Rink">
-            <img src="assets/pollachi-road-map.jpg" alt="Road Map - Pollachi International Speed Skating Rink" loading="lazy" width="1024" height="603">
+            <img src="assets/pollachi-road-map.jpg" alt="Road Map - Pollachi International Speed Skating Rink" loading="lazy" width="1414" height="1000">
             <span class="layout-zoom-badge">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
               View Full Screen
@@ -955,7 +958,7 @@ a.social:hover { background: var(--navy); border-color: var(--orange-light); }
       <img src="" alt="" id="lightbox-img" class="lightbox-img">
     </div>
     <div class="lightbox-hint">
-      <span>Scroll or pinch to zoom &bull; Drag to pan &bull; Double-click to toggle zoom</span>
+      <span>Click, scroll or pinch to zoom &bull; Drag to pan &bull; Click again to reset</span>
     </div>
   </div>
 </div>
@@ -987,6 +990,13 @@ a.social:hover { background: var(--navy); border-color: var(--orange-light); }
     if (!canvas) return;
     canvas.style.transform = 'translate(' + panX + 'px, ' + panY + 'px) scale(' + scale + ')';
     if (lbBadge) lbBadge.textContent = Math.round(scale * 100) + '%';
+    if (stage) {
+      if (scale > 1.08) {
+        stage.classList.add('is-zoomed');
+      } else {
+        stage.classList.remove('is-zoomed');
+      }
+    }
   }
 
   function resetView() {
@@ -997,7 +1007,7 @@ a.social:hover { background: var(--navy); border-color: var(--orange-light); }
   }
 
   function zoomAt(newScale, focalX, focalY) {
-    newScale = Math.min(4.5, Math.max(1, newScale));
+    newScale = Math.min(6, Math.max(1, newScale));
     if (newScale === scale) return;
     if (newScale === 1) {
       resetView();
@@ -1053,8 +1063,8 @@ a.social:hover { background: var(--navy); border-color: var(--orange-light); }
   });
 
   if (lbClose) lbClose.addEventListener('click', closeLightbox);
-  if (lbZoomIn) lbZoomIn.addEventListener('click', function() { zoomAt(scale * 1.3); });
-  if (lbZoomOut) lbZoomOut.addEventListener('click', function() { zoomAt(scale / 1.3); });
+  if (lbZoomIn) lbZoomIn.addEventListener('click', function() { zoomAt(scale * 1.35); });
+  if (lbZoomOut) lbZoomOut.addEventListener('click', function() { zoomAt(scale / 1.35); });
   if (lbZoomReset) lbZoomReset.addEventListener('click', resetView);
 
   // Mouse wheel zoom
@@ -1106,6 +1116,17 @@ a.social:hover { background: var(--navy); border-color: var(--orange-light); }
       isPanning = false;
       stage.classList.remove('is-panning');
       try { stage.releasePointerCapture(e.pointerId); } catch(err) {}
+      var moved = Math.hypot(e.clientX - startPointerX, e.clientY - startPointerY);
+      if (moved < 6) {
+        var rect = stage.getBoundingClientRect();
+        var focalX = e.clientX - rect.left;
+        var focalY = e.clientY - rect.top;
+        if (scale > 1.15) {
+          resetView();
+        } else {
+          zoomAt(2.6, focalX, focalY);
+        }
+      }
     }
     stage.addEventListener('pointerup', endPan);
     stage.addEventListener('pointercancel', endPan);
