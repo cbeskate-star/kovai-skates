@@ -202,6 +202,172 @@ h2 { margin: 0 0 14px; font: 600 clamp(30px, 4.2vw, 44px)/1.12 var(--font-displa
   .tl-event { grid-template-columns: minmax(0, 1fr); gap: 6px; }
 }
 
+/* Track and Road Layouts */
+.layouts-sec { background: var(--card); }
+.layouts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  margin-top: 36px;
+}
+@media (max-width: 768px) {
+  .layouts-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+}
+.layout-card {
+  margin: 0;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(13, 31, 79, 0.05);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.layout-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--orange);
+  box-shadow: 0 10px 28px rgba(13, 31, 79, 0.1);
+}
+.layout-thumb-wrap {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  background: #000;
+  aspect-ratio: 16 / 9.5;
+  display: block;
+}
+.layout-thumb-wrap img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease, opacity 0.2s ease;
+}
+.layout-thumb-wrap:hover img {
+  transform: scale(1.03);
+  opacity: 0.92;
+}
+.layout-zoom-badge {
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
+  background: rgba(13, 31, 79, 0.88);
+  backdrop-filter: blur(4px);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  pointer-events: none;
+  transition: background 0.2s ease;
+}
+.layout-thumb-wrap:hover .layout-zoom-badge {
+  background: var(--orange);
+  color: var(--navy);
+}
+.layout-zoom-badge svg {
+  width: 15px;
+  height: 15px;
+}
+.layout-card figcaption {
+  padding: 16px 20px;
+  background: #FAF6EA;
+  border-top: 1px solid var(--line);
+}
+.layout-card figcaption strong {
+  display: block;
+  font-size: 18px;
+  font-family: var(--font-display);
+  color: var(--navy);
+  margin-bottom: 2px;
+}
+.layout-card figcaption span {
+  font-size: 13.5px;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+/* Lightbox Modal */
+.layout-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(8, 18, 48, 0.94);
+  backdrop-filter: blur(8px);
+  display: none;
+  flex-direction: column;
+  padding: 16px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.layout-lightbox.is-open {
+  display: flex;
+  opacity: 1;
+}
+.lightbox-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 6px 12px 14px;
+  color: #fff;
+  flex-shrink: 0;
+}
+.lightbox-title {
+  font-family: var(--font-display);
+  font-size: clamp(16px, 2.2vw, 22px);
+  font-weight: 600;
+  color: var(--gold-soft);
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.lightbox-close {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+  flex-shrink: 0;
+}
+.lightbox-close:hover {
+  background: var(--orange);
+  color: var(--navy);
+  border-color: var(--orange);
+}
+.lightbox-body {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+  cursor: zoom-out;
+}
+.lightbox-img {
+  max-width: 98%;
+  max-height: 86vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+  cursor: default;
+}
+
 /* Sponsors */
 .sponsor-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; list-style: none; margin: 0; padding: 0; }
 .sponsor { height: 160px; display: grid; place-items: center; gap: 6px; padding: 20px 24px; text-align: center; background: var(--card); border: 1px solid var(--line); border-radius: 16px; text-decoration: none; color: var(--ink); }
@@ -372,6 +538,46 @@ a.social:hover { background: var(--navy); border-color: var(--orange-light); }
             <img src="assets/championship-schedule.png" alt="36th Tamil Nadu State Roller Skating Championship 2026 Schedule Chart" class="schedule-chart-img" width="856" height="430" loading="lazy">
           </a>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band layouts-sec" id="layouts" aria-labelledby="layouts-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Venue circuits &amp; zones</p>
+        <h2 id="layouts-title">Track and road layouts</h2>
+        <p class="lead">Official circuit diagrams and zoning layouts for track and road races at Pollachi International Speed Skating Rink. Tap any layout to view in full screen.</p>
+      </div>
+
+      <div class="layouts-grid">
+        <figure class="layout-card">
+          <div class="layout-thumb-wrap" role="button" tabindex="0" aria-label="Open Track Event Map in full screen" data-full="assets/pollachi-track-event-map.jpg" data-title="Track Event Map – Pollachi International Speed Skating Rink">
+            <img src="assets/pollachi-track-event-map.jpg" alt="Track Event Map - Pollachi International Speed Skating Rink" loading="lazy" width="1024" height="600">
+            <span class="layout-zoom-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+              View Full Screen
+            </span>
+          </div>
+          <figcaption>
+            <strong>Track Event Map</strong>
+            <span>Active layout followed during track events &amp; speed skating races</span>
+          </figcaption>
+        </figure>
+
+        <figure class="layout-card">
+          <div class="layout-thumb-wrap" role="button" tabindex="0" aria-label="Open Road Map in full screen" data-full="assets/pollachi-road-map.jpg" data-title="Road Map – Pollachi International Speed Skating Rink">
+            <img src="assets/pollachi-road-map.jpg" alt="Road Map - Pollachi International Speed Skating Rink" loading="lazy" width="1024" height="603">
+            <span class="layout-zoom-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+              View Full Screen
+            </span>
+          </div>
+          <figcaption>
+            <strong>Road Map</strong>
+            <span>Circuit layout followed during road races, warm-ups &amp; perimeter routes</span>
+          </figcaption>
+        </figure>
       </div>
     </div>
   </section>
@@ -635,5 +841,66 @@ a.social:hover { background: var(--navy); border-color: var(--orange-light); }
 })();
 </script>
 
+<div class="layout-lightbox" id="layout-lightbox" role="dialog" aria-modal="true" aria-label="Full screen layout viewer">
+  <div class="lightbox-bar">
+    <h3 class="lightbox-title" id="lightbox-title"></h3>
+    <button type="button" class="lightbox-close" id="lightbox-close" aria-label="Close full screen view">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      <span>Close</span>
+    </button>
+  </div>
+  <div class="lightbox-body">
+    <img src="" alt="" id="lightbox-img" class="lightbox-img">
+  </div>
+</div>
+<script>
+(function() {
+  var lb = document.getElementById('layout-lightbox');
+  var lbImg = document.getElementById('lightbox-img');
+  var lbTitle = document.getElementById('lightbox-title');
+  var lbClose = document.getElementById('lightbox-close');
+  function openLightbox(src, title) {
+    if (!lb || !lbImg) return;
+    lbImg.src = src;
+    lbImg.alt = title;
+    if (lbTitle) lbTitle.textContent = title;
+    lb.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    if (!lb) return;
+    lb.classList.remove('is-open');
+    if (lbImg) lbImg.src = '';
+    document.body.style.overflow = '';
+  }
+  document.querySelectorAll('.layout-thumb-wrap').forEach(function (btn) {
+    function trigger() {
+      var src = btn.getAttribute('data-full');
+      var title = btn.getAttribute('data-title') || '';
+      openLightbox(src, title);
+    }
+    btn.addEventListener('click', trigger);
+    btn.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        trigger();
+      }
+    });
+  });
+  if (lbClose) lbClose.addEventListener('click', closeLightbox);
+  if (lb) {
+    lb.addEventListener('click', function (e) {
+      if (e.target === lb || e.target.classList.contains('lightbox-body')) {
+        closeLightbox();
+      }
+    });
+  }
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && lb && lb.classList.contains('is-open')) {
+      closeLightbox();
+    }
+  });
+})();
+</script>
 </body>
 </html>
