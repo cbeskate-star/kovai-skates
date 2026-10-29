@@ -169,6 +169,36 @@ h2 { margin: 0 0 14px; font: 600 clamp(30px, 4.2vw, 44px)/1.12 var(--font-displa
 
 /* Timeline */
 .schedule { background: var(--paper); }
+.schedule-cta-wrap { display: flex; justify-content: center; margin-bottom: 24px; }
+.schedule-cta-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  min-height: 52px; padding: 0 32px; border-radius: 999px;
+  background: linear-gradient(135deg, #F0892B 0%, #FF9F38 50%, #FFB54D 100%);
+  color: #071228; font-family: var(--font-display); font-size: 19px; font-weight: 700;
+  letter-spacing: 0.02em; text-decoration: none;
+  box-shadow: 0 6px 24px rgba(240, 137, 43, 0.45), 0 0 0 3px rgba(240, 137, 43, 0.22);
+  transition: all 0.22s cubic-bezier(0.2, 0.8, 0.2, 1);
+  position: relative; overflow: hidden;
+}
+.schedule-cta-btn::before {
+  content: ""; position: absolute; top: 0; left: -75%; width: 50%; height: 100%;
+  background: linear-gradient(120deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.45) 50%, rgba(255,255,255,0) 100%);
+  transform: skewX(-25deg); animation: btnShimmer 3s infinite;
+}
+@keyframes btnShimmer { 0% { left: -75%; } 35% { left: 135%; } 100% { left: 135%; } }
+.schedule-cta-btn:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 10px 32px rgba(240, 137, 43, 0.6), 0 0 0 4px rgba(240, 137, 43, 0.35);
+  background: linear-gradient(135deg, #FF9538 0%, #FFA847 50%, #FFBF63 100%);
+  color: #040B18;
+}
+.schedule-cta-btn svg { flex-shrink: 0; }
+.schedule-cta-btn .icon-doc { width: 22px; height: 22px; }
+.schedule-cta-btn .icon-arrow { width: 18px; height: 18px; transition: transform 0.2s ease; }
+.schedule-cta-btn:hover .icon-arrow { transform: translateX(3px); }
+@media (max-width: 600px) {
+  .schedule-cta-btn { width: 100%; font-size: 16.5px; min-height: 48px; padding: 0 18px; }
+}
 .schedule-chart-wrap { margin-top: 32px; max-width: 960px; margin-inline: auto; }
 .schedule-scroll-hint { display: none; align-items: center; justify-content: center; gap: 8px; font-size: 13px; font-weight: 600; color: var(--muted); margin-bottom: 12px; letter-spacing: 0.04em; }
 .schedule-scroll-hint svg { width: 16px; height: 16px; color: var(--orange-ink); }
@@ -631,6 +661,13 @@ a.social:hover { background: var(--navy); border-color: var(--orange-light); }
 
   <section class="band schedule" id="schedule" aria-labelledby="schedule-title">
     <div class="wrap">
+      <div class="schedule-cta-wrap">
+        <a class="schedule-cta-btn" href="https://drive.google.com/file/d/1WUWXX-5RCEgbT_7vaSTqvxP0gDYs6sd6/view?usp=drive_link" target="_blank" rel="noopener">
+          <svg class="icon-doc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          <span>Browse the event schedule</span>
+          <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
       <div class="section-head">
         <p class="eyebrow">Championship programme</p>
         <h2 id="schedule-title">Schedule timeline</h2>
