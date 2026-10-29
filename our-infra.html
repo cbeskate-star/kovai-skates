@@ -209,6 +209,60 @@
       color: var(--muted);
       line-height: 1.5;
     }
+
+    .infra-card-media {
+      position: relative;
+      width: 100%;
+      height: 280px;
+      background: #0B132B;
+      overflow: hidden;
+    }
+    .infra-card-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+    .infra-card:hover .infra-card-media img {
+      transform: scale(1.03);
+    }
+    .infra-highlight-banner {
+      background: linear-gradient(135deg, rgba(239, 107, 74, 0.08) 0%, rgba(28, 37, 65, 0.04) 100%);
+      border: 1.5px solid rgba(239, 107, 74, 0.4);
+      border-left: 5px solid var(--orange);
+      border-radius: 10px;
+      padding: 18px 22px;
+      box-shadow: 0 4px 14px rgba(239, 107, 74, 0.08);
+    }
+    .highlight-badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 8px;
+    }
+    .highlight-badge-pill svg {
+      width: 16px;
+      height: 16px;
+      fill: var(--orange);
+    }
+    .infra-highlight-banner p {
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--navy);
+      font-weight: 500;
+    }
+    .infra-highlight-banner strong {
+      color: var(--maroon);
+      font-weight: 700;
+    }
+
     @media (max-width: 860px) {
       .infra-grid {
         grid-template-columns: 1fr;
@@ -380,6 +434,85 @@
             </div>
             <div class="infra-card-footer">
               <a class="map-btn" href="https://maps.app.goo.gl/7zXHf42svNc9BA249" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/>
+                </svg>
+                View on Google Maps
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <div class="intro" style="grid-template-columns: 1fr; margin-top: 60px; margin-bottom: 20px;">
+          <div>
+            <h2>Tracks Affiliated by CDSA</h2>
+            <p class="lead">Private and institutional skating infrastructure affiliated with the Coimbatore District Skating Association, built to international racing standards.</p>
+          </div>
+        </div>
+
+        <div class="infra-grid" style="grid-template-columns: minmax(0, 1fr); max-width: 960px; margin: 30px auto 0;">
+          <!-- Pollachi International Roller Skating Track -->
+          <article class="infra-card">
+            <div class="infra-card-media">
+              <img src="assets/event/pollachi-track.webp" alt="Pollachi International Roller Skating Track" loading="lazy" width="1200" height="420">
+            </div>
+            <div class="infra-card-header">
+              <span class="infra-tag popular">Flagship Affiliated Facility</span>
+              <h2>Pollachi International Roller Skating Track</h2>
+              <div class="infra-location">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/>
+                </svg>
+                <span>Pollachi, Coimbatore District, Tamil Nadu</span>
+              </div>
+            </div>
+            <div class="infra-card-body">
+              <div class="infra-highlight-banner">
+                <div class="highlight-badge-pill">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <span>Championship Distinction &amp; Track Record</span>
+                </div>
+                <p>This is the <strong>first skating infrastructure in Tamil Nadu with both road and rink facility</strong>. The track has hosted a <strong>national event</strong>, <strong>2 state events</strong>, and is the proud host for the upcoming <strong>36th Tamil Nadu State Roller Skating Championship 2026</strong>.</p>
+              </div>
+
+              <p class="infra-desc">Engineered for world-class competitive speed skating, the Pollachi International Roller Skating Track provides an integrated arena featuring a 200-meter parabolic banked track accompanied by a comprehensive dedicated road course. Surrounded by scenic green groves, this facility provides championship-grade racing conditions with specialized high-speed synthetic coating, electronic timing support, floodlighting, and athlete amenities.</p>
+
+              <div class="infra-specs">
+                <div class="spec-item">
+                  <dt>Facility Type</dt>
+                  <dd>Dual Banked Track &amp; Dedicated Road Course</dd>
+                </div>
+                <div class="spec-item">
+                  <dt>Surface</dt>
+                  <dd>High-Speed Synthetic Championship Coating</dd>
+                </div>
+                <div class="spec-item">
+                  <dt>Lighting</dt>
+                  <dd>High-Mast Competition Floodlights</dd>
+                </div>
+                <div class="spec-item">
+                  <dt>Major Milestones</dt>
+                  <dd>1 National Event &amp; 2 State Championships</dd>
+                </div>
+              </div>
+
+              <ul class="infra-features">
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span><strong>Dual Track &amp; Road Facility:</strong> Tamil Nadu's first complete racing venue allowing simultaneous preparation and racing for banked track sprints and long-distance road circuits.</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span><strong>Host of the 36th TN State Championship 2026:</strong> Official flagship host for inaugural ceremonies, speed skating competitions, and artistic events.</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span><strong>Championship-Grade Infrastructure:</strong> Features expansive athlete paddocks, medical stations, spectator seating, and designated referee zoning.</span>
+                </li>
+              </ul>
+            </div>
+            <div class="infra-card-footer">
+              <a class="map-btn" href="https://maps.app.goo.gl/6L8bSxQGWsHgXBtC8" target="_blank" rel="noopener">
                 <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/>
                 </svg>
