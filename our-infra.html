@@ -262,6 +262,73 @@
       color: var(--maroon);
       font-weight: 700;
     }
+    .infra-subtitle {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--maroon);
+      margin: 6px 0 0;
+      letter-spacing: 0.02em;
+    }
+    .infra-section-title {
+      font-size: 20px;
+      font-family: 'Barlow Condensed', 'Barlow', sans-serif;
+      font-weight: 700;
+      color: var(--navy);
+      margin: 8px 0 0;
+      letter-spacing: 0.02em;
+      border-bottom: 2px solid var(--mist);
+      padding-bottom: 6px;
+    }
+    .infra-specs-table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+    }
+    .infra-specs-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 15px;
+      text-align: left;
+    }
+    .infra-specs-table th {
+      background: var(--navy);
+      color: #fff;
+      font-family: 'Barlow Condensed', 'Barlow', sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 12px 18px;
+    }
+    .infra-specs-table td {
+      padding: 12px 18px;
+      border-bottom: 1px solid var(--line);
+      color: var(--ink);
+      line-height: 1.5;
+    }
+    .infra-specs-table tr:last-child td {
+      border-bottom: none;
+    }
+    .infra-specs-table tr:nth-child(even) td {
+      background: #FAFAFD;
+    }
+    .infra-specs-table td strong {
+      color: var(--navy);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .infra-section-header {
+      grid-template-columns: 1fr;
+      margin-top: 50px;
+      margin-bottom: 20px;
+    }
+    .infra-grid-single {
+      grid-template-columns: minmax(0, 1fr) !important;
+      max-width: 960px;
+      margin: 30px auto 0;
+    }
 
     @media (max-width: 860px) {
       .infra-grid {
@@ -270,6 +337,138 @@
       .guidelines-grid {
         grid-template-columns: 1fr;
         gap: 16px;
+      }
+    }
+    @media (max-width: 680px) {
+      .infra-section-header {
+        margin-top: 28px;
+        margin-bottom: 14px;
+      }
+      .infra-grid-single {
+        margin-top: 18px;
+      }
+      .infra-grid {
+        gap: 22px;
+        margin-top: 18px;
+      }
+      .infra-card {
+        border-radius: 14px;
+        box-shadow: 0 6px 22px rgba(28, 37, 65, 0.07);
+        border: 1.5px solid var(--line);
+      }
+      .infra-card-media {
+        height: 210px;
+      }
+      .infra-card-header {
+        padding: 16px 18px 14px;
+      }
+      .infra-card-header h2 {
+        font-size: 23px;
+        line-height: 1.2;
+      }
+      .infra-tag {
+        font-size: 11.5px;
+        padding: 4px 9px;
+        margin-bottom: 8px;
+        border-radius: 4px;
+      }
+      .infra-subtitle {
+        font-size: 14.5px;
+        margin-top: 4px;
+        line-height: 1.4;
+      }
+      .infra-location {
+        font-size: 13.5px;
+        margin-top: 6px;
+      }
+      .infra-location svg {
+        width: 15px;
+        height: 15px;
+      }
+      .infra-card-body {
+        padding: 16px 18px 20px;
+        gap: 14px;
+      }
+      .infra-desc {
+        font-size: 14.5px;
+        line-height: 1.55;
+      }
+      .infra-section-title {
+        font-size: 18.5px;
+        margin: 8px 0 2px;
+        padding-bottom: 6px;
+      }
+      .infra-specs {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px 12px;
+        padding: 12px 14px;
+        border-radius: 8px;
+        background: #F3F5FA;
+      }
+      .spec-item dt {
+        font-size: 11px;
+        letter-spacing: 0.06em;
+      }
+      .spec-item dd {
+        font-size: 13.5px;
+        margin-top: 3px;
+      }
+      .infra-features {
+        gap: 8px;
+      }
+      .infra-features li {
+        font-size: 13.5px;
+        line-height: 1.45;
+        gap: 10px;
+      }
+      .infra-features svg {
+        width: 16px;
+        height: 16px;
+        margin-top: 2px;
+      }
+      .infra-specs-table-wrap {
+        border-radius: 8px;
+      }
+      .infra-specs-table th {
+        padding: 10px 12px;
+        font-size: 12.5px;
+      }
+      .infra-specs-table td {
+        padding: 9px 12px;
+        font-size: 13px;
+        line-height: 1.4;
+      }
+      .infra-card-footer {
+        padding: 14px 18px 16px;
+        background: #FAFAFD;
+      }
+      .map-btn {
+        font-size: 16px;
+        padding: 12px 18px;
+        border-radius: 8px;
+        min-height: 48px;
+      }
+      .guidelines-box {
+        margin-top: 24px;
+        padding: 18px 20px;
+        border-radius: 12px;
+        border-left-width: 5px;
+      }
+      .guidelines-box h3 {
+        font-size: 20px;
+        margin-bottom: 8px;
+      }
+      .guidelines-grid {
+        gap: 14px;
+        margin-top: 14px;
+      }
+      .guideline-item b {
+        font-size: 14.5px;
+        margin-bottom: 3px;
+      }
+      .guideline-item p {
+        font-size: 13.5px;
+        line-height: 1.45;
       }
     }
   </style>
@@ -307,9 +506,14 @@
   </header>
   <main id="main">
     <header class="band">
-      <div class="wrap">
-        <h1>Our Infrastructure</h1>
-        <p>Quality roller skating rinks and dedicated training tracks powering athletes across Coimbatore district.</p>
+      <div class="wrap band-grid">
+        <div class="band-badge">
+          <img src="assets/cdsa-logo-360.webp" alt="Coimbatore District Skating Association emblem" width="130" height="130">
+        </div>
+        <div>
+          <h1>Our Infrastructure</h1>
+          <p>Quality roller skating rinks and dedicated training tracks powering athletes across Coimbatore district.</p>
+        </div>
       </div>
       <div class="slash" aria-hidden="true"></div>
     </header>
@@ -318,7 +522,7 @@
       <div class="wrap">
         <div class="intro" style="grid-template-columns: 1fr; margin-bottom: 20px;">
           <div>
-            <h2>Tracks Admistrated by CDSA</h2>
+            <h2>Tracks Administered by CDSA</h2>
             <p class="lead">Coimbatore boasts some of the finest public roller sports infrastructure in Tamil Nadu. Managed in collaboration with municipal bodies and sports institutions, our rinks provide safe, high-speed surfaces where grassroots beginners grow into state champions and national medalists.</p>
           </div>
         </div>
@@ -443,14 +647,14 @@
           </article>
         </div>
 
-        <div class="intro" style="grid-template-columns: 1fr; margin-top: 60px; margin-bottom: 20px;">
+        <div class="intro infra-section-header">
           <div>
             <h2>Tracks Affiliated by CDSA</h2>
             <p class="lead">Private and institutional skating infrastructure affiliated with the Coimbatore District Skating Association, built to international racing standards.</p>
           </div>
         </div>
 
-        <div class="infra-grid" style="grid-template-columns: minmax(0, 1fr); max-width: 960px; margin: 30px auto 0;">
+        <div class="infra-grid infra-grid-single">
           <!-- Pollachi International Roller Skating Track -->
           <article class="infra-card">
             <div class="infra-card-media">
@@ -459,6 +663,7 @@
             <div class="infra-card-header">
               <span class="infra-tag popular">Flagship Affiliated Facility</span>
               <h2>Pollachi International Roller Skating Track</h2>
+              <p class="infra-subtitle">Engineered for Speed. Built to World Skate Standards.</p>
               <div class="infra-location">
                 <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/>
@@ -467,49 +672,73 @@
               </div>
             </div>
             <div class="infra-card-body">
-              <div class="infra-highlight-banner">
-                <div class="highlight-badge-pill">
-                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                  <span>Championship Distinction &amp; Track Record</span>
-                </div>
-                <p>This is the <strong>first skating infrastructure in Tamil Nadu with both road and rink facility</strong>. The track has hosted a <strong>national event</strong>, <strong>2 state events</strong>, and is the proud host for the upcoming <strong>36th Tamil Nadu State Roller Skating Championship 2026</strong>.</p>
-              </div>
+              <p class="infra-desc">The Pollachi International Roller Skating Track is a premier speed skating facility in Tamil Nadu, constructed in strict alignment with World Skate technical regulations. Designed to host high-stakes district, state, and national championships, the track provides competitive speed skaters with an uncompromising arena engineered for pure pace, tactical racing, and top-tier performance.</p>
 
-              <p class="infra-desc">Engineered for world-class competitive speed skating, the Pollachi International Roller Skating Track provides an integrated arena featuring a 200-meter parabolic banked track accompanied by a comprehensive dedicated road course. Surrounded by scenic green groves, this facility provides championship-grade racing conditions with specialized high-speed synthetic coating, electronic timing support, floodlighting, and athlete amenities.</p>
-
-              <div class="infra-specs">
-                <div class="spec-item">
-                  <dt>Facility Type</dt>
-                  <dd>Dual Banked Track &amp; Dedicated Road Course</dd>
-                </div>
-                <div class="spec-item">
-                  <dt>Surface</dt>
-                  <dd>High-Speed Synthetic Championship Coating</dd>
-                </div>
-                <div class="spec-item">
-                  <dt>Lighting</dt>
-                  <dd>High-Mast Competition Floodlights</dd>
-                </div>
-                <div class="spec-item">
-                  <dt>Major Milestones</dt>
-                  <dd>1 National Event &amp; 2 State Championships</dd>
-                </div>
-              </div>
-
+              <h3 class="infra-section-title">Key Track Highlights</h3>
               <ul class="infra-features">
                 <li>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                  <span><strong>Dual Track &amp; Road Facility:</strong> Tamil Nadu's first complete racing venue allowing simultaneous preparation and racing for banked track sprints and long-distance road circuits.</span>
+                  <span><strong>Standard 200m Competition Layout:</strong> Built to the official 200-metre running line with a uniform 6-metre track width, giving athletes the exact geometry and lane clearance required for international sprint, distance, and relay formats.</span>
                 </li>
                 <li>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                  <span><strong>Host of the 36th TN State Championship 2026:</strong> Official flagship host for inaugural ceremonies, speed skating competitions, and artistic events.</span>
+                  <span><strong>World Skate Certified Banking:</strong> Engineered with official banking angles on the curves balanced against flat straights, providing the necessary centripetal grip and banking transition for high-speed cornering and smooth pack transitions.</span>
                 </li>
                 <li>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                  <span><strong>Championship-Grade Infrastructure:</strong> Features expansive athlete paddocks, medical stations, spectator seating, and designated referee zoning.</span>
+                  <span><strong>Seamless High-Performance Surface:</strong> Covering over 14,000 square feet, the competition track features a professional multi-layer synthetic acrylic resin system. It guarantees high traction, minimal rolling resistance, and consistent surface response under all race conditions.</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span><strong>Athlete Safety Infrastructure:</strong> Completely bounded by a continuous, shatterproof safety barrier featuring flush joints, a base guard kickplate, and outward-opening security gates to ensure complete racer safety at maximum pack speeds.</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span><strong>Competition Lighting &amp; Logistics:</strong> Fitted with powerful floodlights for evening sessions and night championships, along with designated zones for timing, photo-finish gear, athlete warmups, and coach briefings.</span>
                 </li>
               </ul>
+
+              <h3 class="infra-section-title">Track Specifications</h3>
+              <div class="infra-specs-table-wrap">
+                <table class="infra-specs-table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Parameter</th>
+                      <th scope="col">Official Specification</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>Discipline</strong></td>
+                      <td>Inline Speed Skating</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Track Length</strong></td>
+                      <td>200 Metres (measured along the inner curb)</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Track Width</strong></td>
+                      <td>6.00 Metres</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Track Profile</strong></td>
+                      <td>World Skate standard banked curves with flat straights</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Surface Finish</strong></td>
+                      <td>Seamless, high-grip synthetic acrylic resin sports coating</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Safety Barrier</strong></td>
+                      <td>Full-perimeter shatterproof transparent panels with safety handrail</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Applications</strong></td>
+                      <td>State/National Tournaments, Selection Trials, and High-Performance Coaching</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
             <div class="infra-card-footer">
               <a class="map-btn" href="https://maps.app.goo.gl/6L8bSxQGWsHgXBtC8" target="_blank" rel="noopener">
