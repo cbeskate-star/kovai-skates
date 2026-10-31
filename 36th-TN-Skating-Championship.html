@@ -592,18 +592,18 @@ h2 { margin: 0 0 14px; font: 600 clamp(30px, 4.2vw, 44px)/1.12 var(--font-displa
 
 /* Secondary tier sponsor logos (Associate & Partner sponsors - compact size) */
 .sponsor-grid-sm {
-  margin-top: 16px;
+  margin-top: 18px;
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 14px;
 }
 .sponsor.sponsor-sm {
-  height: 108px;
+  height: 104px;
   padding: 12px 18px;
   border-radius: 12px;
 }
 .sponsor.sponsor-sm img {
-  max-width: min(100%, 150px);
-  max-height: 50px;
+  max-width: min(100%, 140px);
+  max-height: 48px;
 }
 
 @media (max-width: 980px) {
@@ -634,17 +634,11 @@ h2 { margin: 0 0 14px; font: 600 clamp(30px, 4.2vw, 44px)/1.12 var(--font-displa
     max-width: min(100%, 160px);
   }
 
-  /* Smaller sponsor cards on mobile */
+  /* Smaller sponsor cards on mobile - balanced 2-column grid */
   .sponsor-grid-sm {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 10px;
-    margin-top: 10px;
-  }
-  .sponsor-grid-sm > li:last-child:nth-child(odd) {
-    grid-column: 1 / -1;
-    max-width: 75%;
-    margin: 0 auto;
-    width: 100%;
+    margin-top: 12px;
   }
   .sponsor.sponsor-sm {
     height: 82px;
@@ -927,7 +921,7 @@ a.social:hover { background: var(--navy); border-color: var(--orange-light); }
 (function () {
   // ===== EDIT HERE: event sponsors =====
   // Shown in this order. To add one: { name: "Brand name", logo: "assets/brand-logo.png", url: "https://www.brand.com" } (url is optional).
-    var SPONSORS = [
+      var SPONSORS = [
     { name: "Amutha Surabhi", logo: "assets/event/sponsors/amutha-surabhi.webp" },
     { name: "ACT Fibernet", logo: "assets/event/sponsors/act-fibernet.webp" },
     { name: "Bont", logo: "assets/event/sponsors/bont.webp" },
@@ -937,7 +931,12 @@ a.social:hover { background: var(--navy); border-color: var(--orange-light); }
     { name: "Powerslide", logo: "assets/event/sponsors/powerslide.webp", size: "small" },
     { name: "SR - Built with Pride in India", logo: "assets/event/sponsors/sr-skates.webp", size: "small" },
     { name: "Manao Wheels", logo: "assets/event/sponsors/manao-wheels.webp", size: "small" },
-    { name: "Adynox Sportswear", logo: "assets/event/sponsors/adynox.webp", size: "small" }
+    { name: "Adynox Sportswear", logo: "assets/event/sponsors/adynox.webp", size: "small" },
+    { name: "Swings n Wings", logo: "assets/event/sponsors/swings-n-wings.webp", size: "small" },
+    { name: "Velocity Team", logo: "assets/event/sponsors/velocity-team.webp", size: "small" },
+    { name: "Project: 666", logo: "assets/event/sponsors/project-666.webp", size: "small" },
+    { name: "AVO Shoot Bearings", logo: "assets/event/sponsors/avo-bearings.webp", size: "small" },
+    { name: "Battle Racing Speed Skates", logo: "assets/event/sponsors/battle-racing.webp", size: "small" }
   ];
   var SPONSOR_SLOTS = 0; // set above 0 to show empty "Sponsor logo" placeholders
 
