@@ -587,12 +587,78 @@ h2 { margin: 0 0 14px; font: 600 clamp(30px, 4.2vw, 44px)/1.12 var(--font-displa
 
 /* Sponsors */
 .sponsor-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; list-style: none; margin: 0; padding: 0; }
-.sponsor { height: 160px; display: grid; place-items: center; gap: 6px; padding: 20px 24px; text-align: center; background: var(--card); border: 1px solid var(--line); border-radius: 16px; text-decoration: none; color: var(--ink); }
-.sponsor img { display: block; width: auto; height: auto; max-width: min(100%, 230px); max-height: 88px; object-fit: contain; }
+.sponsor { height: 156px; display: grid; place-items: center; gap: 6px; padding: 20px 24px; text-align: center; background: var(--card); border: 1px solid var(--line); border-radius: 16px; text-decoration: none; color: var(--ink); box-shadow: 0 4px 14px rgba(28, 37, 65, 0.04); transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease; }
+.sponsor:hover { transform: translateY(-2px); border-color: var(--orange); box-shadow: 0 8px 22px rgba(28, 37, 65, 0.09); }
+.sponsor img { display: block; width: auto; height: auto; max-width: min(100%, 230px); max-height: 84px; object-fit: contain; }
 .sponsor .s-name { font-size: 13px; font-weight: 600; }
-a.sponsor:hover { border-color: var(--orange); }
 .sponsor.empty { background: transparent; border: 1.5px dashed #D6C59C; color: var(--muted); font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; }
-@media (max-width: 640px) { .sponsor-grid { grid-template-columns: minmax(0, 1fr); gap: 12px; } .sponsor { height: 128px; } .sponsor img { max-height: 76px; } }
+
+/* Secondary tier sponsor logos (Associate & Partner sponsors - compact size) */
+.sponsor-grid-sm {
+  margin-top: 16px;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+}
+.sponsor.sponsor-sm {
+  height: 108px;
+  padding: 12px 18px;
+  border-radius: 12px;
+}
+.sponsor.sponsor-sm img {
+  max-width: min(100%, 150px);
+  max-height: 50px;
+}
+
+@media (max-width: 980px) {
+  .sponsor-grid-sm {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+  }
+}
+
+@media (max-width: 640px) {
+  .sponsor-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .sponsor-grid:not(.sponsor-grid-sm) > li:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    max-width: 75%;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .sponsor {
+    height: 108px;
+    padding: 12px 14px;
+    border-radius: 12px;
+  }
+  .sponsor img {
+    max-height: 56px;
+    max-width: min(100%, 160px);
+  }
+
+  /* Smaller sponsor cards on mobile */
+  .sponsor-grid-sm {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .sponsor-grid-sm > li:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    max-width: 75%;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .sponsor.sponsor-sm {
+    height: 82px;
+    padding: 8px 12px;
+    border-radius: 10px;
+  }
+  .sponsor.sponsor-sm img {
+    max-height: 38px;
+    max-width: min(100%, 120px);
+  }
+}
 
 /* Social links */
 .socials { margin-top: 32px; }
@@ -830,7 +896,9 @@ a.social:hover { background: var(--navy); border-color: var(--orange-light); }
         <h2 id="sponsors-title">Event sponsors</h2>
       </div>
       <!-- Sponsor logos are filled from the SPONSORS list at the top of the script below. -->
+            <!-- Sponsor logos are filled from the SPONSORS list at the top of the script below. -->
       <ul class="sponsor-grid" id="sponsor-grid"></ul>
+      <ul class="sponsor-grid sponsor-grid-sm" id="sponsor-grid-sm" aria-label="Associate event sponsors and partners"></ul>
     </div>
   </section>
 </main>
@@ -863,12 +931,17 @@ a.social:hover { background: var(--navy); border-color: var(--orange-light); }
 (function () {
   // ===== EDIT HERE: event sponsors =====
   // Shown in this order. To add one: { name: "Brand name", logo: "assets/brand-logo.png", url: "https://www.brand.com" } (url is optional).
-  var SPONSORS = [
+    var SPONSORS = [
     { name: "Amutha Surabhi", logo: "assets/event/sponsors/amutha-surabhi.webp" },
     { name: "ACT Fibernet", logo: "assets/event/sponsors/act-fibernet.webp" },
     { name: "Bont", logo: "assets/event/sponsors/bont.webp" },
     { name: "Equitas Small Finance Bank", logo: "assets/event/sponsors/equitas.webp" },
-    { name: "KVS", logo: "assets/event/sponsors/kvs.webp" }
+    { name: "KVS", logo: "assets/event/sponsors/kvs.webp" },
+    { name: "Keshav Vidhya Mandir", logo: "assets/event/sponsors/keshav-vidhya-mandir.webp", size: "small" },
+    { name: "Powerslide", logo: "assets/event/sponsors/powerslide.webp", size: "small" },
+    { name: "SR - Built with Pride in India", logo: "assets/event/sponsors/sr-skates.webp", size: "small" },
+    { name: "Manao Wheels", logo: "assets/event/sponsors/manao-wheels.webp", size: "small" },
+    { name: "Adynox Sportswear", logo: "assets/event/sponsors/adynox.webp", size: "small" }
   ];
   var SPONSOR_SLOTS = 0; // set above 0 to show empty "Sponsor logo" placeholders
 
@@ -989,28 +1062,33 @@ a.social:hover { background: var(--navy); border-color: var(--orange-light); }
 
   }
 
-  // Sponsors
+    // Sponsors
   var sg = document.getElementById('sponsor-grid');
-  var slots = Math.max(SPONSOR_SLOTS, SPONSORS.length);
-  for (var si = 0; si < slots; si++) {
-    var sp = SPONSORS[si];
-    var cell = el('li');
-    if (sp && (sp.logo || sp.name)) {
-      var box = el(sp.url ? 'a' : 'div', 'sponsor');
-      if (sp.url) { box.href = sp.url; box.target = '_blank'; box.rel = 'noopener'; }
-      if (sp.logo) {
+  var sgSm = document.getElementById('sponsor-grid-sm');
+  if (sg) {
+    sg.innerHTML = '';
+    if (sgSm) sgSm.innerHTML = '';
+    for (var si = 0; si < SPONSORS.length; si++) {
+      var sp = SPONSORS[si];
+      var cell = el('li');
+      var isSm = sp && sp.size === 'small';
+      var box = el(sp && sp.url ? 'a' : 'div', 'sponsor' + (isSm ? ' sponsor-sm' : ''));
+      if (sp && sp.url) { box.href = sp.url; box.target = '_blank'; box.rel = 'noopener'; }
+      if (sp && sp.logo) {
         var img = el('img');
         img.src = sp.logo;
         img.alt = sp.name || 'Sponsor';
         box.appendChild(img);
-      } else {
+      } else if (sp && sp.name) {
         box.appendChild(el('span', 's-name', sp.name));
       }
       cell.appendChild(box);
-    } else {
-      cell.appendChild(el('div', 'sponsor empty', 'Sponsor logo'));
+      if (isSm && sgSm) {
+        sgSm.appendChild(cell);
+      } else {
+        sg.appendChild(cell);
+      }
     }
-    sg.appendChild(cell);
   }
 
   // Social links
