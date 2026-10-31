@@ -593,7 +593,7 @@ h2 { margin: 0 0 14px; font: 600 clamp(30px, 4.2vw, 44px)/1.12 var(--font-displa
 /* Secondary tier sponsor logos (Associate & Partner sponsors - compact size) */
 .sponsor-grid-sm {
   margin-top: 18px;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 14px;
 }
 .sponsor.sponsor-sm {
@@ -606,7 +606,14 @@ h2 { margin: 0 0 14px; font: 600 clamp(30px, 4.2vw, 44px)/1.12 var(--font-displa
   max-height: 48px;
 }
 
-@media (max-width: 980px) {
+@media (max-width: 1100px) {
+  .sponsor-grid-sm {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+  }
+}
+
+@media (max-width: 768px) {
   .sponsor-grid-sm {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 12px;
@@ -921,7 +928,7 @@ a.social:hover { background: var(--navy); border-color: var(--orange-light); }
 (function () {
   // ===== EDIT HERE: event sponsors =====
   // Shown in this order. To add one: { name: "Brand name", logo: "assets/brand-logo.png", url: "https://www.brand.com" } (url is optional).
-      var SPONSORS = [
+        var SPONSORS = [
     { name: "Amutha Surabhi", logo: "assets/event/sponsors/amutha-surabhi.webp" },
     { name: "ACT Fibernet", logo: "assets/event/sponsors/act-fibernet.webp" },
     { name: "Bont", logo: "assets/event/sponsors/bont.webp" },
@@ -936,7 +943,9 @@ a.social:hover { background: var(--navy); border-color: var(--orange-light); }
     { name: "Velocity Team", logo: "assets/event/sponsors/velocity-team.webp", size: "small" },
     { name: "Project: 666", logo: "assets/event/sponsors/project-666.webp", size: "small" },
     { name: "AVO Shoot Bearings", logo: "assets/event/sponsors/avo-bearings.webp", size: "small" },
-    { name: "Battle Racing Speed Skates", logo: "assets/event/sponsors/battle-racing.webp", size: "small" }
+    { name: "Battle Racing Speed Skates", logo: "assets/event/sponsors/battle-racing.webp", size: "small" },
+    { name: "Sportify Sports Arena", logo: "assets/event/sponsors/sportify.webp", size: "small" },
+    { name: "Trinity", logo: "assets/event/sponsors/trinity.webp", size: "small" }
   ];
   var SPONSOR_SLOTS = 0; // set above 0 to show empty "Sponsor logo" placeholders
 
