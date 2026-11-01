@@ -164,8 +164,14 @@ h2 { margin: 0 0 14px; font: 600 clamp(30px, 4.2vw, 44px)/1.12 var(--font-displa
 .map-link .icon { width: 16px; height: 16px; }
 @media (max-width: 560px) { .venue { grid-template-columns: minmax(0, 1fr); } }
 
-/* Timeline */
-.schedule { background: var(--paper); }
+/* Timeline & Compact Gap after Venues */
+section[aria-labelledby="details-title"].band {
+  padding-bottom: clamp(18px, 2.5vw, 28px);
+}
+.schedule.band {
+  padding-top: clamp(18px, 2.5vw, 28px);
+  background: var(--paper);
+}
 .schedule-preview-card {
   max-width: 520px;
   margin: 0 auto 30px auto;
