@@ -829,6 +829,102 @@ section[aria-labelledby="details-title"].band {
   }
 }
 
+
+/* Additional Event Sponsors Tier */
+.additional-sponsors-head {
+  margin-top: clamp(40px, 6vw, 68px);
+}
+.assoc-sponsors-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+.assoc-sponsor-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 26px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(28, 37, 65, 0.04);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.assoc-sponsor-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--orange);
+  box-shadow: 0 8px 22px rgba(28, 37, 65, 0.09);
+}
+
+/* Image 2: PDRSA (First & Larger) */
+.assoc-sponsor-lg {
+  width: 320px;
+  height: 176px;
+}
+.assoc-sponsor-lg img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 92%;
+  max-height: 130px;
+  object-fit: contain;
+}
+
+/* Image 1: RARS6 (Second & Little Smaller) */
+.assoc-sponsor-sm {
+  width: 270px;
+  height: 136px;
+}
+.assoc-sponsor-sm img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 92%;
+  max-height: 62px;
+  object-fit: contain;
+}
+
+/* Dark card for RARS6 so metallic chrome & gold pop cleanly */
+.assoc-sponsor-dark {
+  background: #060b18;
+  border-color: rgba(240, 137, 43, 0.35);
+}
+.assoc-sponsor-dark:hover {
+  border-color: var(--orange);
+  box-shadow: 0 8px 24px rgba(240, 137, 43, 0.25);
+}
+
+@media (max-width: 640px) {
+  .additional-sponsors-head {
+    margin-top: 36px;
+  }
+  .assoc-sponsors-container {
+    gap: 16px;
+    margin-top: 18px;
+  }
+  .assoc-sponsor-lg {
+    width: min(100%, 280px);
+    height: 148px;
+    padding: 14px 20px;
+  }
+  .assoc-sponsor-lg img {
+    max-height: 104px;
+    max-width: 88%;
+  }
+  .assoc-sponsor-sm {
+    width: min(100%, 240px);
+    height: 110px;
+    padding: 12px 18px;
+  }
+  .assoc-sponsor-sm img {
+    max-height: 48px;
+    max-width: 90%;
+  }
+}
+
 /* Social links */
 .socials { margin-top: 32px; }
 .socials small { font-size: 11.5px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold-soft); }
@@ -1074,6 +1170,21 @@ a.social:hover { background: var(--navy); border-color: var(--orange-light); }
             <!-- Sponsor logos are filled from the SPONSORS list at the top of the script below. -->
       <ul class="sponsor-grid" id="sponsor-grid"></ul>
       <ul class="sponsor-grid sponsor-grid-sm" id="sponsor-grid-sm" aria-label="Associate event sponsors and partners"></ul>
+
+      <!-- Additional Event Sponsors Tier -->
+      <div class="section-head additional-sponsors-head">
+        <h2 id="sponsors-title-additional">Event sponsors</h2>
+      </div>
+      <div class="assoc-sponsors-container" aria-labelledby="sponsors-title-additional">
+        <!-- Image 2: PDRSA (First and Larger) -->
+        <div class="assoc-sponsor-card assoc-sponsor-lg" title="Pollachi Divisional Roller Skating Association">
+          <img src="assets/event/sponsors/pdrsa-logo.webp" alt="Pollachi Divisional Roller Skating Association (PDRSA)" loading="lazy">
+        </div>
+        <!-- Image 1: RARS6 (Second and Little Smaller) -->
+        <div class="assoc-sponsor-card assoc-sponsor-sm assoc-sponsor-dark" title="Rahul's Academy of Roller Skating">
+          <img src="assets/event/sponsors/rars6-logo.webp" alt="Rahul's Academy of Roller Skating (RARS6)" loading="lazy">
+        </div>
+      </div>
     </div>
   </section>
   <!-- Floating Live Results Button -->
