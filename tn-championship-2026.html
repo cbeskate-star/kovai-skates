@@ -830,7 +830,7 @@ section[aria-labelledby="details-title"].band {
 }
 
 
-/* Additional Event Sponsors Tier */
+/* Event Host Partners Tier */
 .additional-sponsors-head {
   margin-top: clamp(40px, 6vw, 68px);
 }
@@ -846,7 +846,7 @@ section[aria-labelledby="details-title"].band {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 18px 26px;
+  padding: 16px 24px;
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: 16px;
@@ -862,32 +862,34 @@ section[aria-labelledby="details-title"].band {
 /* Image 2: PDRSA (First & Larger) */
 .assoc-sponsor-lg {
   width: 320px;
-  height: 176px;
+  height: 180px;
+  padding: 18px 24px;
 }
 .assoc-sponsor-lg img {
   display: block;
   width: auto;
   height: auto;
-  max-width: 92%;
-  max-height: 130px;
+  max-width: min(92%, 220px);
+  max-height: 136px;
   object-fit: contain;
 }
 
-/* Image 1: RARS6 (Second & Little Smaller) */
+/* Image 1: RARS6 (Second & Smaller) */
 .assoc-sponsor-sm {
   width: 270px;
-  height: 136px;
+  height: 124px;
+  padding: 14px 20px;
 }
 .assoc-sponsor-sm img {
   display: block;
   width: auto;
   height: auto;
-  max-width: 92%;
-  max-height: 62px;
+  max-width: min(92%, 220px);
+  max-height: 52px;
   object-fit: contain;
 }
 
-/* Dark card for RARS6 so metallic chrome & gold pop cleanly */
+/* Dark card for RARS6 metallic chrome & gold styling */
 .assoc-sponsor-dark {
   background: #060b18;
   border-color: rgba(240, 137, 43, 0.35);
@@ -902,26 +904,26 @@ section[aria-labelledby="details-title"].band {
     margin-top: 36px;
   }
   .assoc-sponsors-container {
-    gap: 16px;
+    gap: 14px;
     margin-top: 18px;
   }
   .assoc-sponsor-lg {
     width: min(100%, 280px);
-    height: 148px;
+    height: 154px;
     padding: 14px 20px;
   }
   .assoc-sponsor-lg img {
-    max-height: 104px;
-    max-width: 88%;
+    max-height: 110px;
+    max-width: min(90%, 190px);
   }
   .assoc-sponsor-sm {
     width: min(100%, 240px);
-    height: 110px;
-    padding: 12px 18px;
+    height: 104px;
+    padding: 10px 16px;
   }
   .assoc-sponsor-sm img {
-    max-height: 48px;
-    max-width: 90%;
+    max-height: 42px;
+    max-width: min(92%, 190px);
   }
 }
 
@@ -1171,18 +1173,160 @@ a.social:hover { background: var(--navy); border-color: var(--orange-light); }
       <ul class="sponsor-grid" id="sponsor-grid"></ul>
       <ul class="sponsor-grid sponsor-grid-sm" id="sponsor-grid-sm" aria-label="Associate event sponsors and partners"></ul>
 
-      <!-- Additional Event Sponsors Tier -->
+            <!-- Event Host Partners Tier -->
       <div class="section-head additional-sponsors-head">
-        <h2 id="sponsors-title-additional">Event sponsors</h2>
+        <h2 id="host-partners-title">Event host partners</h2>
       </div>
-      <div class="assoc-sponsors-container" aria-labelledby="sponsors-title-additional">
+      <div class="assoc-sponsors-container" aria-labelledby="host-partners-title">
         <!-- Image 2: PDRSA (First and Larger) -->
         <div class="assoc-sponsor-card assoc-sponsor-lg" title="Pollachi Divisional Roller Skating Association">
           <img src="assets/event/sponsors/pdrsa-logo.webp" alt="Pollachi Divisional Roller Skating Association (PDRSA)" loading="lazy">
         </div>
-        <!-- Image 1: RARS6 (Second and Little Smaller) -->
+        <!-- Image 1: RARS6 (Second and Smaller) -->
         <div class="assoc-sponsor-card assoc-sponsor-sm assoc-sponsor-dark" title="Rahul's Academy of Roller Skating">
           <img src="assets/event/sponsors/rars6-logo.webp" alt="Rahul's Academy of Roller Skating (RARS6)" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <figure class="track">
+    <img src="assets/event/pollachi-track.webp" alt="The blue skating track and green infield of the Pollachi rink, ringed by floodlights and coconut palms" width="2000" height="701">
+    <figcaption class="wrap">Pollachi International Speed Skating Rink, home of Speed Skating and the inauguration.</figcaption>
+  </figure>
+
+  <section class="band" aria-labelledby="details-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">About the event</p>
+        <h2 id="details-title">Event details</h2>
+      </div>
+      <div class="facts">
+        <div class="fact"><h3>Dates</h3><p>31 Oct – 6 Nov 2026</p><small>Reporting from 30 October</small></div>
+        <div class="fact"><h3>Inauguration</h3><p>Sat 31 Oct · 5:00 – 7:00 PM</p><small>Pollachi International Speed Skating Rink</small></div>
+        <div class="fact"><h3>Host towns</h3><p>Pollachi · Kinathukadavu · Coimbatore · Ooty</p><small>Eight disciplines across five venues</small></div>
+      </div>
+      <div class="venues">
+        <h3>Venues</h3>
+        <ul class="venue-list" id="venue-list"></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="band schedule" id="schedule" aria-labelledby="schedule-title">
+    <div class="wrap">
+            <div class="schedule-preview-card">
+        <a class="schedule-preview-link" href="https://drive.google.com/file/d/1WUWXX-5RCEgbT_7vaSTqvxP0gDYs6sd6/view?usp=drive_link" target="_blank" rel="noopener" aria-label="Browse full event schedule on Google Drive">
+          <div class="schedule-preview-media">
+            <img src="assets/schedule-preview.jpg" alt="36th TNRSA State Roller Skating Championship 2026 - Schedule at a Glance Preview" width="835" height="805" loading="lazy">
+            <div class="schedule-preview-overlay">
+              <span class="preview-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="18" height="18"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                Open Full Schedule (PDF)
+              </span>
+            </div>
+          </div>
+        </a>
+        <div class="schedule-cta-wrap">
+          <a class="schedule-cta-btn" href="https://drive.google.com/file/d/1WUWXX-5RCEgbT_7vaSTqvxP0gDYs6sd6/view?usp=drive_link" target="_blank" rel="noopener">
+            <svg class="icon-doc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            <span>Browse the event schedule</span>
+            <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a class="results-cta-btn" href="https://scoreman.in/app/live/updates.php?source=5a601e20b9de9fa0c82378ec07caa60642072569507a654a08973292a362cbde&amp;c=tnstate2026-8ea20d" target="_blank" rel="noopener">
+            <span class="live-dot" aria-hidden="true"></span>
+            <svg class="icon-trophy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M6 9H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h2"/><path d="M18 9h2a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-2"/><path d="M4 3h16v6a7 7 0 0 1-14 0V3z"/><path d="M12 16v5M8 21h8"/></svg>
+            <span>Click to View Results</span>
+            <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="section-head">
+        <p class="eyebrow">Championship programme</p>
+        <h2 id="schedule-title">Schedule timeline</h2>
+        <p class="lead">Discipline schedule, reporting dates, and competition days from 30 October to 6 November 2026 across Pollachi, Coimbatore, Kinathukadavu, and Ooty.</p>
+      </div>
+      <div class="schedule-chart-wrap">
+        <div class="schedule-scroll-hint" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 16l-4-4m0 0l4-4m-4 4h18m-4 4l4-4m0 0l-4-4"/></svg>
+          <span>Scroll horizontally to view full schedule</span>
+        </div>
+        <div class="schedule-chart-card">
+          <div class="layout-thumb-wrap" role="button" tabindex="0" aria-label="Open Schedule Chart in full screen" data-full="assets/championship-schedule.jpg" data-title="36th Tamil Nadu State Roller Skating Championship 2026 – Discipline Schedule">
+            <img src="assets/championship-schedule.jpg" alt="36th Tamil Nadu State Roller Skating Championship 2026 Schedule Chart" class="schedule-chart-img" width="1024" height="514" loading="lazy">
+            <span class="layout-zoom-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+              View Full Screen
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band layouts-sec" id="layouts" aria-labelledby="layouts-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Venue circuits &amp; zones</p>
+        <h2 id="layouts-title">Track and road layouts</h2>
+        <p class="lead">Official circuit diagrams and zoning layouts for track and road races at Pollachi International Speed Skating Rink. Tap any layout to view in full screen.</p>
+      </div>
+
+      <div class="layouts-grid">
+        <figure class="layout-card">
+          <div class="layout-thumb-wrap" role="button" tabindex="0" aria-label="Open Track Event Map in full screen" data-full="assets/pollachi-track-event-map-hq.jpg" data-title="Track Event Map – Pollachi International Speed Skating Rink">
+            <img src="assets/pollachi-track-event-map-hq.jpg" alt="Track Event Map - Pollachi International Speed Skating Rink" loading="lazy" width="2481" height="1754">
+            <span class="layout-zoom-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+              View Full Screen
+            </span>
+          </div>
+          <figcaption>
+            <strong>Track Event Map</strong>
+            <span>Active layout followed during track events &amp; speed skating races</span>
+          </figcaption>
+        </figure>
+
+        <figure class="layout-card">
+          <div class="layout-thumb-wrap" role="button" tabindex="0" aria-label="Open Road Map in full screen" data-full="assets/pollachi-road-map-hq.jpg" data-title="Road Map – Pollachi International Speed Skating Rink">
+            <img src="assets/pollachi-road-map-hq.jpg" alt="Road Map - Pollachi International Speed Skating Rink" loading="lazy" width="2481" height="1754">
+            <span class="layout-zoom-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+              View Full Screen
+            </span>
+          </div>
+          <figcaption>
+            <strong>Road Map</strong>
+            <span>Circuit layout followed during road races, warm-ups &amp; perimeter routes</span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="sponsors" aria-labelledby="sponsors-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">With thanks to</p>
+        <h2 id="sponsors-title">Event sponsors</h2>
+      </div>
+      <!-- Sponsor logos are filled from the SPONSORS list at the top of the script below. -->
+            <!-- Sponsor logos are filled from the SPONSORS list at the top of the script below. -->
+      <ul class="sponsor-grid" id="sponsor-grid"></ul>
+      <ul class="sponsor-grid sponsor-grid-sm" id="sponsor-grid-sm" aria-label="Associate event sponsors and partners"></ul>
+
+      <!-- Event Host Partners Tier -->
+      <div class="section-head additional-sponsors-head">
+        <h2 id="host-partners-title">Event host partners</h2>
+      </div>
+      <div class="assoc-sponsors-container" aria-labelledby="host-partners-title">
+        <!-- Image 1: RARS6 (First and Larger) -->
+        <div class="assoc-sponsor-card assoc-sponsor-lg assoc-sponsor-dark" title="Rahul's Academy of Roller Skating">
+          <img src="assets/event/sponsors/rars6-logo.webp" alt="Rahul's Academy of Roller Skating (RARS6)" loading="lazy">
+        </div>
+        <!-- Image 2: PDRSA (Second and Smaller) -->
+        <div class="assoc-sponsor-card assoc-sponsor-sm" title="Pollachi Divisional Roller Skating Association">
+          <img src="assets/event/sponsors/pdrsa-logo.webp" alt="Pollachi Divisional Roller Skating Association (PDRSA)" loading="lazy">
         </div>
       </div>
     </div>
