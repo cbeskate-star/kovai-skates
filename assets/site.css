@@ -200,7 +200,9 @@ a:focus-visible{outline:3px solid var(--orange);outline-offset:3px;border-radius
 .mails dd a{color:#fff;text-decoration:none;overflow-wrap:anywhere;font-size:16px}
 .insta{display:inline-flex;align-items:center;gap:8px;margin-top:14px;color:#fff;text-decoration:none;font-size:15px}
 .insta svg{width:18px;height:18px;color:var(--orange)}
-.site-foot .legal{position:relative;z-index:2;margin-top:48px;border-top:1px solid rgba(255,255,255,.14);padding:18px 0 22px;font-size:14px;color:#AEB5CB;text-align:right}
+.site-foot .legal{position:relative;z-index:2;margin-top:48px;border-top:1px solid rgba(255,255,255,.14);padding:18px 0 22px;font-size:14px;color:#AEB5CB}
+.site-foot .legal-row{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.site-foot .watermark-credit{font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,.45);font-weight:600}
 
 /* ---------- responsive ---------- */
 @media (max-width:960px){
@@ -349,4 +351,6 @@ a:focus-visible{outline:3px solid var(--orange);outline-offset:3px;border-radius
   .mails dt{font-size:12px}
   .mails dd a{font-size:14px}
   .site-foot .legal{margin-top:24px;padding:14px 0 18px;font-size:12.5px;text-align:center}
+  .site-foot .legal-row{flex-direction:column;justify-content:center;text-align:center;gap:6px}
+  .site-foot .watermark-credit{font-size:11px}
 }
