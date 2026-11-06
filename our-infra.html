@@ -479,13 +479,6 @@
 
 <body>
   <a class="skip" href="#main">Skip to content</a>
-  <div class="announce" id="announce">
-    <div class="wrap">
-      <span id="announce-text">CDSA hosts the 36th Tamil Nadu State Roller Skating Championship, 31 Oct to 6 Nov
-        2026.</span>
-      <a id="announce-link" href="36th-TN-Skating-Championship.html">Schedule and venues</a>
-    </div>
-  </div>
   <header class="site-head">
     <div class="wrap">
       <div class="bar">
@@ -811,19 +804,6 @@
     </div>
   </div>
 </footer>
-  <script>
-    /* Announcement strip changes by itself before, during and after the championship (India time). */
-    (function () {
-      try {
-        var now = Date.now(), start = Date.UTC(2026, 9, 31, 11, 30), end = Date.UTC(2026, 10, 6, 18, 30), hide = Date.UTC(2026, 11, 31, 18, 30);
-        var bar = document.getElementById('announce'), t = document.getElementById('announce-text'), a = document.getElementById('announce-link');
-        if (!bar) return;
-        if (now >= hide) { bar.remove(); return; }
-        if (now >= end) { t.textContent = 'The 36th Tamil Nadu State Roller Skating Championship has concluded. Thank you to every skater, family and official.'; a.textContent = 'Results'; a.href = 'events.html#results'; }
-        else if (now >= start) { t.textContent = 'The 36th Tamil Nadu State Roller Skating Championship is on now.'; a.textContent = "See today's schedule"; a.href = '36th-TN-Skating-Championship.html#schedule'; }
-      } catch (e) { }
-    })();
-  </script>
 </body>
 
 </html>
