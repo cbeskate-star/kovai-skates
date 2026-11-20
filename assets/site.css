@@ -540,6 +540,45 @@ a:focus-visible, button:focus-visible {
   gap: 14px;
 }
 
+/* ---------- Hero Affiliated Governing Bodies Badges ---------- */
+.hero-affil-logos {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 26px;
+}
+
+.hero-affil-badge {
+  background: #FFFFFF;
+  border-radius: 6px;
+  padding: 4px 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero-affil-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.hero-affil-badge img {
+  height: 20px;
+  width: auto;
+  max-width: 75px;
+  object-fit: contain;
+  display: block;
+}
+
+.hero-affil-badge img.crest-tall {
+  height: 24px;
+}
+
 /* ---------- Formal Credentials & Stats Strip ---------- */
 .hero-stats-bar {
   margin-top: 56px;
