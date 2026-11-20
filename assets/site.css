@@ -1875,13 +1875,13 @@ a:focus-visible, button:focus-visible {
   height: 30px;
 }
 
-/* ---------- Formal Footer Crests Ribbon (All Pages - Compact, No Heading) ---------- */
-.foot-affiliations {
-  position: relative;
-  z-index: 2;
-  margin-top: 24px;
-  padding-top: 18px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+/* ---------- Formal Footer Brand Crests (Just Below Brand & Socials) ---------- */
+.f-brand-logos {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
 }
 
 .foot-logos-row {
@@ -1895,11 +1895,11 @@ a:focus-visible, button:focus-visible {
 .foot-logo-badge {
   background: #FFFFFF;
   border-radius: 6px;
-  padding: 5px 10px;
+  padding: 4px 8px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 34px;
+  height: 32px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.28);
   border: 1px solid rgba(255, 255, 255, 0.25);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -1911,11 +1911,15 @@ a:focus-visible, button:focus-visible {
 }
 
 .foot-logo-badge img {
-  height: 22px;
+  height: 20px;
   width: auto;
-  max-width: 80px;
+  max-width: 75px;
   object-fit: contain;
   display: block;
+}
+
+.foot-logo-badge img.crest-tall {
+  height: 23px;
 }
 
 .foot-logo-badge img.crest-tall {
