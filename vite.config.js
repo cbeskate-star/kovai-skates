@@ -4,7 +4,7 @@ import fs from 'fs';
 
 export default defineConfig({
   server: {
-    port: 2130,
+    port: 3550,
   },
   build: {
     rollupOptions: {
@@ -12,6 +12,7 @@ export default defineConfig({
         main: resolve(import.meta.dirname, 'index.html'),
         about: resolve(import.meta.dirname, 'about.html'),
         events: resolve(import.meta.dirname, 'events.html'),
+        facilities: resolve(import.meta.dirname, 'facilities.html'),
         infra: resolve(import.meta.dirname, 'our-infra.html'),
         championship: resolve(import.meta.dirname, '36th-TN-Skating-Championship.html'),
         tnChampionship: resolve(import.meta.dirname, 'tn-championship-2026.html'),
