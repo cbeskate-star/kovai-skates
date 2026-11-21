@@ -1982,13 +1982,33 @@ a:focus-visible, button:focus-visible {
   .site-head .bar {
     flex-direction: column;
     align-items: stretch;
-    gap: 8px;
-    padding: 8px 0 6px;
+    gap: 7px;
+    padding: 7px 0 5px;
+  }
+  .brand {
+    gap: 10px;
+    align-items: center;
+  }
+  .brand img {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    padding: 1.5px;
+  }
+  .brand strong {
+    font-size: 17px;
+    line-height: 1.1;
+    letter-spacing: 0.01em;
+  }
+  .brand small {
+    font-size: 11px;
+    line-height: 1.25;
+    margin-top: 1px;
   }
   .main-nav {
     overflow-x: auto;
     margin: 0 -16px;
-    padding: 2px 16px 6px;
+    padding: 2px 16px 5px;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     display: flex;
@@ -1998,14 +2018,15 @@ a:focus-visible, button:focus-visible {
     display: none;
   }
   .main-nav a {
-    font-size: 14px;
-    padding: 6px 13px;
+    font-size: 13px;
+    padding: 5px 11px;
     border-radius: var(--radius-full);
     background: #F1F4F9;
     color: var(--navy);
     border: 1px solid rgba(21, 29, 54, 0.06);
     font-weight: 600;
     white-space: nowrap;
+    transition: all 0.18s ease;
   }
   .main-nav a:hover {
     background: #E5EAF3;
@@ -2014,7 +2035,8 @@ a:focus-visible, button:focus-visible {
     background: linear-gradient(135deg, var(--maroon) 0%, var(--maroon-dk) 100%);
     color: #fff;
     border-color: transparent;
-    box-shadow: 0 3px 12px rgba(136, 11, 22, 0.28);
+    box-shadow: 0 3px 10px rgba(136, 11, 22, 0.28);
+    font-weight: 700;
   }
   .hero-stats-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -2052,51 +2074,51 @@ a:focus-visible, button:focus-visible {
     text-align: center;
   }
   .hero {
-    padding: 38px 0 46px;
+    padding: 34px 0 40px;
   }
   .page-header {
-    padding: 34px 0 38px;
+    padding: 30px 0 34px;
   }
   .hero-grid {
     grid-template-columns: 1fr;
-    gap: 22px;
+    gap: 18px;
   }
   .hero .actions {
     justify-content: flex-start;
   }
   .badge {
-    width: 108px;
-    height: 108px;
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35), 0 0 0 3px rgba(255, 255, 255, 0.18), 0 0 0 7px rgba(245, 158, 11, 0.3);
-  }
-  .badge img {
-    width: 92px;
-    height: 92px;
-  }
-  .band-grid {
-    gap: 20px;
-  }
-  .band-badge {
     width: 90px;
     height: 90px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3), 0 0 0 2px rgba(255, 255, 255, 0.18), 0 0 0 5px rgba(245, 158, 11, 0.28);
+  }
+  .badge img {
+    width: 74px;
+    height: 74px;
+  }
+  .band-grid {
+    gap: 18px;
+  }
+  .band-badge {
+    width: 72px;
+    height: 72px;
   }
   .band-badge img {
-    width: 76px;
-    height: 76px;
+    width: 60px;
+    height: 60px;
   }
   .hero .track {
     display: none;
   }
   .intro {
     grid-template-columns: 1fr;
-    gap: 22px;
+    gap: 20px;
   }
   .chain {
     grid-template-columns: 1fr;
-    gap: 12px;
+    gap: 10px;
   }
   .link {
-    padding: 5px 0;
+    padding: 4px 0;
   }
   .link svg {
     transform: rotate(90deg);
@@ -2105,97 +2127,107 @@ a:focus-visible, button:focus-visible {
 
 @media (max-width: 640px) {
   body {
-    font-size: 14.5px;
-    line-height: 1.52;
+    font-size: 14px;
+    line-height: 1.5;
   }
   .wrap {
     padding: 0 16px;
   }
   .sec {
-    padding: 38px 0;
+    padding: 34px 0;
   }
   .sec-heading-group {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
   .sec h2 {
-    font-size: clamp(22px, 5.5vw, 28px);
-    line-height: 1.15;
+    font-size: clamp(20px, 4.8vw, 24px);
+    line-height: 1.18;
+    text-wrap: balance;
   }
   .sec-pill {
-    font-size: 11px;
-    padding: 3px 9px;
+    font-size: 10.5px;
+    padding: 2.5px 8px;
     margin-bottom: 8px;
   }
   .sub {
-    font-size: 14px;
-    line-height: 1.48;
-    margin-top: 8px;
+    font-size: 13.5px;
+    line-height: 1.46;
+    margin-top: 6px;
   }
   .brand strong {
-    font-size: 18px;
+    font-size: 16.5px;
   }
   .brand small {
-    font-size: 11.5px;
+    font-size: 11px;
   }
   .brand img {
-    width: 44px;
-    height: 44px;
+    width: 38px;
+    height: 38px;
   }
   .hero h1 {
-    font-size: clamp(28px, 6.5vw, 38px);
-    line-height: 1.05;
+    font-size: clamp(24px, 5.8vw, 30px);
+    line-height: 1.08;
+    text-wrap: balance;
   }
   .hero-stats-grid {
     grid-template-columns: 1fr;
-    gap: 10px;
+    gap: 8px;
   }
   .hero-stats-bar {
-    margin-top: 28px;
-    padding-top: 20px;
+    margin-top: 22px;
+    padding-top: 16px;
   }
   .stat-card {
-    padding: 12px 14px;
+    padding: 10px 12px;
   }
   .stat-num {
-    font-size: 22px;
+    font-size: 20px;
   }
   .stat-lbl {
-    font-size: 12px;
-    margin-top: 4px;
+    font-size: 11.5px;
+    margin-top: 2px;
   }
   .page-header h1 {
-    font-size: clamp(28px, 6vw, 36px);
-    line-height: 1.08;
+    font-size: clamp(23px, 5.4vw, 28px);
+    line-height: 1.1;
   }
   .hero .lede, .page-header .lede {
-    font-size: 14.5px;
-    line-height: 1.5;
-    margin-top: 14px;
+    font-size: 13.5px;
+    line-height: 1.48;
+    margin-top: 10px;
   }
   .hero-kicker {
-    font-size: 12px;
-    padding: 3px 10px;
-    margin-bottom: 12px;
+    font-size: 11px;
+    padding: 2.5px 8px;
+    margin-bottom: 10px;
   }
   .hero-grid {
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 18px;
+    gap: 16px;
+  }
+  .badge {
+    width: 80px;
+    height: 80px;
+  }
+  .badge img {
+    width: 66px;
+    height: 66px;
   }
   .hero .actions {
     width: 100%;
-    max-width: 300px;
-    margin: 18px auto 0;
+    max-width: 290px;
+    margin: 14px auto 0;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
   }
   .hero .actions .btn, .btn {
     width: 100%;
-    min-height: 44px;
-    padding: 0 18px;
-    font-size: 14.5px;
+    min-height: 40px;
+    padding: 0 16px;
+    font-size: 13.5px;
   }
   .bib {
     grid-template-columns: 1fr;
@@ -2203,159 +2235,242 @@ a:focus-visible, button:focus-visible {
   }
   .bib-date {
     flex-direction: row;
-    gap: 12px;
-    padding: 12px 16px;
+    gap: 10px;
+    padding: 10px 14px;
     justify-content: flex-start;
     align-items: baseline;
   }
   .bib-seal {
-    font-size: 10.5px;
-    padding: 2px 7px;
+    font-size: 10px;
+    padding: 2px 6px;
     margin-bottom: 0;
   }
   .bib-date .d {
-    font-size: 38px;
+    font-size: 32px;
     line-height: 1;
   }
   .bib-date .m {
     margin-top: 0;
-    font-size: 14px;
+    font-size: 13px;
   }
   .bib-body {
-    padding: 16px 16px 18px;
+    padding: 14px 14px 16px;
   }
   .bib-body h3 {
-    font-size: 19px;
+    font-size: 17.5px;
     line-height: 1.25;
   }
   .bib dl, .bib-specs {
     grid-template-columns: 1fr;
-    gap: 8px;
-    font-size: 13.5px;
-    margin: 12px 0 16px;
-    padding: 10px 12px;
+    gap: 6px;
+    font-size: 12.5px;
+    margin: 10px 0 14px;
+    padding: 8px 10px;
   }
   .bib dl dt, .bib-specs dt {
-    font-size: 11.5px;
+    font-size: 11px;
   }
   .bib dl dd, .bib-specs dd {
-    font-size: 13.5px;
+    font-size: 12.5px;
   }
   .bib .actions .btn {
     width: 100%;
-    min-height: 44px;
-    font-size: 14px;
+    min-height: 40px;
+    font-size: 13.5px;
   }
   .infra-card-header {
-    padding: 14px 16px 12px;
+    padding: 12px 14px 10px;
   }
   .infra-card-header h2 {
-    font-size: 19px;
+    font-size: 17.5px;
   }
   .infra-tag {
-    font-size: 11px;
-    padding: 3px 8px;
+    font-size: 10.5px;
+    padding: 2.5px 7px;
   }
   .infra-card-body {
-    padding: 14px 16px;
-    gap: 12px;
-    font-size: 13.5px;
-    line-height: 1.48;
+    padding: 12px 14px;
+    gap: 10px;
+    font-size: 13px;
+    line-height: 1.46;
   }
   .infra-specs {
     grid-template-columns: 1fr;
-    gap: 6px;
-    padding: 10px 12px;
-    font-size: 12.5px;
+    gap: 5px;
+    padding: 8px 10px;
+    font-size: 12px;
   }
   .infra-card-footer {
-    padding: 12px 16px 14px;
+    padding: 10px 14px 12px;
   }
   .infra-card-media img {
-    height: 190px;
+    height: 160px;
+  }
+  .person .photo {
+    width: 56px;
+    height: 56px;
   }
   .site-foot {
-    padding: 38px 0 18px;
+    padding: 32px 0 16px;
   }
   .site-foot .cols {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 20px;
   }
   .site-foot h2, .site-foot h3 {
-    font-size: 15px;
-    margin-bottom: 8px;
+    font-size: 14px;
+    margin-bottom: 6px;
   }
   .site-foot address, .foot-list, .mails dd a {
-    font-size: 13px;
+    font-size: 12.5px;
   }
   .foot-social {
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 6px;
   }
   .social-link {
-    font-size: 12.5px;
-    padding: 5px 10px;
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+  .disc-logo {
+    width: 44px;
+    height: 44px;
+  }
+  .disc-logo img {
+    width: 38px;
+    height: 38px;
   }
   .site-foot .legal {
-    margin-top: 26px;
-    padding: 14px 0 16px;
-    font-size: 12.5px;
+    margin-top: 22px;
+    padding: 12px 0 14px;
+    font-size: 11.5px;
   }
   .site-foot .legal-row {
     flex-direction: column;
     text-align: center;
-    gap: 8px;
+    gap: 6px;
   }
   .front-trust-row {
-    gap: 16px;
+    gap: 12px;
   }
   .front-trust-row img {
-    height: 22px;
+    height: 20px;
   }
   .front-trust-row img.crest-tall {
-    height: 26px;
+    height: 23px;
   }
-  .foot-logos-row {
-    gap: 8px;
+  .foot-logos-row, .foot-logos-group {
+    gap: 6px;
+    margin-top: 6px;
   }
   .foot-logo-badge {
-    height: 30px;
-    padding: 4px 8px;
+    height: 26px;
+    padding: 3px 6px;
+    border-radius: 5px;
   }
   .foot-logo-badge img {
-    height: 18px;
-    max-width: 65px;
+    height: 15px;
+    max-width: 54px;
   }
   .foot-logo-badge img.crest-tall {
-    height: 21px;
+    height: 18px;
   }
 }
 
 @media (max-width: 480px) {
   body {
-    font-size: 13.5px;
-    line-height: 1.48;
+    font-size: 13px;
+    line-height: 1.46;
   }
-  .hero h1 {
-    font-size: 26px;
+  .site-head .bar {
+    gap: 5px;
+    padding: 5px 0 3px;
   }
-  .page-header h1 {
-    font-size: 25px;
+  .brand {
+    gap: 8px;
   }
-  .sec h2 {
-    font-size: 21px;
+  .brand img {
+    width: 36px;
+    height: 36px;
+  }
+  .brand strong {
+    font-size: 15px;
+  }
+  .brand small {
+    font-size: 10px;
+  }
+  .main-nav {
+    padding: 1px 12px 4px;
+    margin: 0 -12px;
+    gap: 5px;
   }
   .main-nav a {
+    font-size: 12px;
+    padding: 4px 9px;
+  }
+  .hero h1 {
+    font-size: 22px;
+    line-height: 1.12;
+  }
+  .page-header h1 {
+    font-size: 21px;
+    line-height: 1.14;
+  }
+  .sec h2 {
+    font-size: 18.5px;
+  }
+  .sec h3, .infra-card-header h2, .bib-body h3 {
+    font-size: 15.5px;
+  }
+  .sub, .hero .lede, .page-header .lede {
+    font-size: 12.5px;
+    line-height: 1.44;
+  }
+  .stat-num {
+    font-size: 18px;
+  }
+  .stat-lbl {
+    font-size: 10.5px;
+  }
+  .btn, .hero .actions .btn {
+    min-height: 38px;
+    padding: 0 14px;
     font-size: 13px;
-    padding: 5px 11px;
   }
   .badge {
-    width: 96px;
-    height: 96px;
+    width: 70px;
+    height: 70px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25), 0 0 0 1.5px rgba(255, 255, 255, 0.15), 0 0 0 3px rgba(245, 158, 11, 0.2);
   }
   .badge img {
-    width: 80px;
-    height: 80px;
+    width: 58px;
+    height: 58px;
+  }
+  .band-badge {
+    width: 56px;
+    height: 56px;
+  }
+  .band-badge img {
+    width: 44px;
+    height: 44px;
+  }
+  .infra-card-media img {
+    height: 140px;
+  }
+  .person .photo {
+    width: 50px;
+    height: 50px;
+  }
+  .foot-logo-badge {
+    height: 24px;
+    padding: 2px 5px;
+  }
+  .foot-logo-badge img {
+    height: 14px;
+    max-width: 50px;
+  }
+  .foot-logo-badge img.crest-tall {
+    height: 16px;
   }
 }
