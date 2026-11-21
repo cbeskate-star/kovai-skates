@@ -10,6 +10,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { transform } from 'lightningcss';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -60,6 +61,22 @@ function checkFileTagIntegrity(filePath) {
     errors.push(`Mismatched <style> tags: ${styleOpenCount} open vs ${styleCloseCount} close`);
   }
 
+  // Validate CSS in <style> tags with lightningcss
+  const styleRegex = /<style\b[^>]*>([\s\S]*?)<\/style>/gi;
+  let match;
+  while ((match = styleRegex.exec(content)) !== null) {
+    const cssCode = match[1];
+    try {
+      transform({
+        filename: path.basename(filePath),
+        code: Buffer.from(cssCode),
+        minify: true
+      });
+    } catch (err) {
+      errors.push(`CSS syntax error: ${err.message}`);
+    }
+  }
+
   // Check for duplicate :root declarations in championship file
   if (filePath.includes('Championship') || filePath.includes('championship')) {
     const rootMatches = (content.match(/:\s*root\s*\{/gi) || []).length;
@@ -88,7 +105,18 @@ function run() {
     }
   }
 
-  // 2. Validate all HTML files
+  // 2. Ensure 36th-TN-Skating-Championship.html and tn-championship-2026.html are synchronized
+  if (fs.existsSync(PRIMARY_CHAMPIONSHIP)) {
+    const primaryContent = fs.readFileSync(PRIMARY_CHAMPIONSHIP, 'utf8');
+    const secondaryContent = fs.existsSync(SECONDARY_CHAMPIONSHIP) ? fs.readFileSync(SECONDARY_CHAMPIONSHIP, 'utf8') : '';
+
+    if (primaryContent !== secondaryContent) {
+      console.log('🔄 Auto-syncing tn-championship-2026.html with 36th-TN-Skating-Championship.html...');
+      fs.writeFileSync(SECONDARY_CHAMPIONSHIP, primaryContent, 'utf8');
+    }
+  }
+
+  // 3. Validate all HTML files
   let hasErrors = false;
   for (const file of HTML_FILES) {
     const fullPath = path.join(rootDir, file);
@@ -111,17 +139,9 @@ function run() {
     process.exit(1);
   }
 
-  // 3. Ensure 36th-TN-Skating-Championship.html and tn-championship-2026.html are synchronized
+  // 4. Update verified backup snapshot on successful validation
   if (fs.existsSync(PRIMARY_CHAMPIONSHIP)) {
     const primaryContent = fs.readFileSync(PRIMARY_CHAMPIONSHIP, 'utf8');
-    const secondaryContent = fs.existsSync(SECONDARY_CHAMPIONSHIP) ? fs.readFileSync(SECONDARY_CHAMPIONSHIP, 'utf8') : '';
-
-    if (primaryContent !== secondaryContent) {
-      console.log('🔄 Auto-syncing tn-championship-2026.html with 36th-TN-Skating-Championship.html...');
-      fs.writeFileSync(SECONDARY_CHAMPIONSHIP, primaryContent, 'utf8');
-    }
-
-    // Update verified backup snapshot
     fs.writeFileSync(BACKUP_PATH, primaryContent, 'utf8');
   }
 

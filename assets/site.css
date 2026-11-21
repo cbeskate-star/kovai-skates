@@ -1990,18 +1990,18 @@ a:focus-visible, button:focus-visible {
     align-items: center;
   }
   .brand img {
-    width: 40px;
-    height: 40px;
-    border-radius: 6px;
+    width: 48px;
+    height: 48px;
+    border-radius: 7px;
     padding: 1.5px;
   }
   .brand strong {
-    font-size: 17px;
+    font-size: 17.5px;
     line-height: 1.1;
     letter-spacing: 0.01em;
   }
   .brand small {
-    font-size: 11px;
+    font-size: 11.5px;
     line-height: 1.25;
     margin-top: 1px;
   }
@@ -2087,24 +2087,24 @@ a:focus-visible, button:focus-visible {
     justify-content: flex-start;
   }
   .badge {
-    width: 90px;
-    height: 90px;
+    width: 104px;
+    height: 104px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3), 0 0 0 2px rgba(255, 255, 255, 0.18), 0 0 0 5px rgba(245, 158, 11, 0.28);
   }
   .badge img {
-    width: 74px;
-    height: 74px;
+    width: 86px;
+    height: 86px;
   }
   .band-grid {
     gap: 18px;
   }
   .band-badge {
-    width: 72px;
-    height: 72px;
+    width: 84px;
+    height: 84px;
   }
   .band-badge img {
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
   }
   .hero .track {
     display: none;
@@ -2156,14 +2156,14 @@ a:focus-visible, button:focus-visible {
     margin-top: 4px;
   }
   .brand strong {
-    font-size: 16px;
+    font-size: 16.5px;
   }
   .brand small {
-    font-size: 10.5px;
+    font-size: 11px;
   }
   .brand img {
-    width: 38px;
-    height: 38px;
+    width: 45px;
+    height: 45px;
   }
   .hero {
     padding: 26px 0 30px;
@@ -2201,13 +2201,13 @@ a:focus-visible, button:focus-visible {
     color: rgba(255, 255, 255, 0.88);
   }
   .badge {
-    width: 68px;
-    height: 68px;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25), 0 0 0 2px rgba(255, 255, 255, 0.16), 0 0 0 4px rgba(245, 158, 11, 0.25);
+    width: 88px;
+    height: 88px;
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.26), 0 0 0 2px rgba(255, 255, 255, 0.18), 0 0 0 4px rgba(245, 158, 11, 0.25);
   }
   .badge img {
-    width: 54px;
-    height: 54px;
+    width: 72px;
+    height: 72px;
   }
   .hero .actions {
     width: 100%;
@@ -2263,12 +2263,12 @@ a:focus-visible, button:focus-visible {
     gap: 12px;
   }
   .band-badge {
-    width: 58px;
-    height: 58px;
+    width: 74px;
+    height: 74px;
   }
   .band-badge img {
-    width: 46px;
-    height: 46px;
+    width: 60px;
+    height: 60px;
   }
   .bib {
     grid-template-columns: 1fr;
@@ -2408,7 +2408,7 @@ a:focus-visible, button:focus-visible {
     padding: 8px 12px 10px;
   }
   .infra-card-media img {
-    height: 150px;
+    height: 120px;
   }
   .person .photo {
     width: 52px;
@@ -2507,14 +2507,14 @@ a:focus-visible, button:focus-visible {
     gap: 7px;
   }
   .brand img {
-    width: 34px;
-    height: 34px;
+    width: 40px;
+    height: 40px;
   }
   .brand strong {
-    font-size: 14.5px;
+    font-size: 15px;
   }
   .brand small {
-    font-size: 9.5px;
+    font-size: 10px;
   }
   .main-nav {
     padding: 1px 10px 3px;
@@ -2572,24 +2572,24 @@ a:focus-visible, button:focus-visible {
     font-size: 11.5px;
   }
   .badge {
-    width: 60px;
-    height: 60px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.22), 0 0 0 1.5px rgba(255, 255, 255, 0.15), 0 0 0 3px rgba(245, 158, 11, 0.2);
+    width: 78px;
+    height: 78px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.22), 0 0 0 1.5px rgba(255, 255, 255, 0.16), 0 0 0 3px rgba(245, 158, 11, 0.2);
   }
   .badge img {
-    width: 48px;
-    height: 48px;
+    width: 64px;
+    height: 64px;
   }
   .band-badge {
-    width: 48px;
-    height: 48px;
+    width: 64px;
+    height: 64px;
   }
   .band-badge img {
-    width: 38px;
-    height: 38px;
+    width: 52px;
+    height: 52px;
   }
   .infra-card-media img {
-    height: 130px;
+    height: 105px;
   }
   .person .photo {
     width: 46px;
