@@ -638,7 +638,7 @@ a:focus-visible, button:focus-visible {
   overflow: hidden;
   background: radial-gradient(110% 110% at 75% 25%, #25335C 0%, #151D36 55%, #0D1324 100%);
   color: #fff;
-  padding: 68px 0 62px;
+  padding: 34px 0 30px;
 }
 
 .band-grid {
@@ -646,13 +646,13 @@ a:focus-visible, button:focus-visible {
   z-index: 2;
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 36px;
+  gap: 24px;
   align-items: center;
 }
 
 .band-badge {
-  width: 130px;
-  height: 130px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   background: #fff;
   display: grid;
@@ -667,14 +667,18 @@ a:focus-visible, button:focus-visible {
 }
 
 .band-badge img {
-  width: 110px;
-  height: 110px;
+  width: 100px;
+  height: 100px;
   object-fit: contain;
 }
 
+.band .sec-pill {
+  margin-bottom: 8px;
+}
+
 .band h1 {
-  font-size: clamp(40px, 5.2vw, 62px);
-  line-height: 1.05;
+  font-size: clamp(38px, 4.8vw, 56px);
+  line-height: 1.06;
   margin: 0;
   letter-spacing: -0.01em;
 }
@@ -682,11 +686,20 @@ a:focus-visible, button:focus-visible {
 .band p {
   position: relative;
   z-index: 2;
-  margin-top: 12px;
+  margin-top: 6px;
   color: #D6DCED;
-  font-size: 18.5px;
-  max-width: 62ch;
-  line-height: 1.55;
+  font-size: 17.5px;
+  max-width: 64ch;
+  line-height: 1.5;
+}
+
+/* Reduced spacing between band header and subsequent section */
+.band + .sec,
+.band + section,
+header.band + .sec,
+header.band + section,
+main > .band + * {
+  padding-top: 36px;
 }
 
 /* ---------- Formal Event Accreditation Pass / Bib ---------- */
@@ -1617,7 +1630,7 @@ a:focus-visible, button:focus-visible {
 
 /* ---------- 404 ---------- */
 .lost {
-  padding: 90px 0 100px;
+  padding: 44px 0 48px;
 }
 
 .lost-grid {
@@ -2076,8 +2089,8 @@ a:focus-visible, button:focus-visible {
   .hero {
     padding: 34px 0 40px;
   }
-  .page-header {
-    padding: 30px 0 34px;
+  .page-header, .band {
+    padding: 22px 0 20px;
   }
   .hero-grid {
     grid-template-columns: 1fr;
@@ -2096,7 +2109,17 @@ a:focus-visible, button:focus-visible {
     height: 86px;
   }
   .band-grid {
-    gap: 18px;
+    gap: 14px;
+  }
+  .band .sec-pill {
+    margin-bottom: 6px;
+  }
+  .band + .sec,
+  .band + section,
+  header.band + .sec,
+  header.band + section,
+  main > .band + * {
+    padding-top: 24px;
   }
   .band-badge {
     width: 84px;
@@ -2242,8 +2265,8 @@ a:focus-visible, button:focus-visible {
     line-height: 1.22;
     margin-top: 2px;
   }
-  .page-header {
-    padding: 24px 0 26px;
+  .page-header, .band {
+    padding: 16px 0 16px;
   }
   .page-header h1, .band h1 {
     font-size: clamp(20px, 4.8vw, 24px);
@@ -2252,10 +2275,30 @@ a:focus-visible, button:focus-visible {
   .page-header .lede, .band p {
     font-size: 12px;
     line-height: 1.42;
-    margin-top: 6px;
+    margin-top: 4px;
     max-width: 46ch;
   }
   .band-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+  }
+  .band .sec-pill {
+    margin-bottom: 4px;
+  }
+  .band + .sec,
+  .band + section,
+  header.band + .sec,
+  header.band + section,
+  main > .band + * {
+    padding-top: 18px;
+  }
+  .lost {
+    padding: 24px 0 28px;
+  }
+  .lost-grid {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -2542,13 +2585,36 @@ a:focus-visible, button:focus-visible {
     font-size: 11.5px;
     line-height: 1.38;
   }
+  .page-header, .band {
+    padding: 12px 0 14px;
+  }
   .page-header h1, .band h1 {
-    font-size: 19px;
+    font-size: 18.5px;
     line-height: 1.12;
   }
   .page-header .lede, .band p {
-    font-size: 11.5px;
+    font-size: 11px;
     line-height: 1.38;
+    margin-top: 3px;
+  }
+  .band-grid {
+    gap: 6px;
+  }
+  .band .sec-pill {
+    margin-bottom: 3px;
+  }
+  .band + .sec,
+  .band + section,
+  header.band + .sec,
+  header.band + section,
+  main > .band + * {
+    padding-top: 14px;
+  }
+  .lost {
+    padding: 16px 0 20px;
+  }
+  .lost-grid {
+    gap: 8px;
   }
   .sec h2 {
     font-size: 17px;
