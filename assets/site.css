@@ -1916,7 +1916,15 @@ a:focus-visible, button:focus-visible {
   height: 30px;
 }
 
-/* ---------- Formal Footer Brand Crests (Just Below Brand & Socials) ---------- */
+/* ---------- Formal Footer Brand Crests & Affiliation Badges ---------- */
+.foot-logos-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
 .f-brand-logos {
   display: flex;
   align-items: center;
