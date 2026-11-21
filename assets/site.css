@@ -1995,8 +1995,8 @@ main > .band + * {
   .site-head .bar {
     flex-direction: column;
     align-items: stretch;
-    gap: 7px;
-    padding: 7px 0 5px;
+    gap: 8px;
+    padding: 8px 0 6px;
   }
   .brand {
     gap: 10px;
@@ -2021,7 +2021,7 @@ main > .band + * {
   .main-nav {
     overflow-x: auto;
     margin: 0 -16px;
-    padding: 2px 16px 5px;
+    padding: 3px 16px 6px;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     display: flex;
@@ -2032,7 +2032,7 @@ main > .band + * {
   }
   .main-nav a {
     font-size: 13px;
-    padding: 5px 11px;
+    padding: 5.5px 12px;
     border-radius: var(--radius-full);
     background: #F1F4F9;
     color: var(--navy);
@@ -2048,7 +2048,7 @@ main > .band + * {
     background: linear-gradient(135deg, var(--maroon) 0%, var(--maroon-dk) 100%);
     color: #fff;
     border-color: transparent;
-    box-shadow: 0 3px 10px rgba(136, 11, 22, 0.28);
+    box-shadow: 0 3px 10px rgba(154, 14, 26, 0.28);
     font-weight: 700;
   }
   .hero-stats-grid {
@@ -2178,15 +2178,27 @@ main > .band + * {
     line-height: 1.42;
     margin-top: 4px;
   }
+  .site-head .bar {
+    gap: 8px;
+    padding: 8px 0 6px;
+  }
   .brand strong {
-    font-size: 16.5px;
+    font-size: 17px;
   }
   .brand small {
-    font-size: 11px;
+    font-size: 11.5px;
   }
   .brand img {
-    width: 45px;
-    height: 45px;
+    width: 48px;
+    height: 48px;
+  }
+  .main-nav {
+    padding: 2px 16px 6px;
+    gap: 6px;
+  }
+  .main-nav a {
+    font-size: 13px;
+    padding: 5px 12px;
   }
   .hero {
     padding: 26px 0 30px;
@@ -2453,9 +2465,38 @@ main > .band + * {
   .infra-card-media img {
     height: 120px;
   }
+  .people.lead3 {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px 18px;
+    justify-content: center;
+  }
+  .person {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .person .photo {
-    width: 52px;
-    height: 52px;
+    width: 180px;
+    height: 225px;
+    aspect-ratio: 4/5;
+    max-width: 100%;
+    border-radius: 12px;
+  }
+  .person .photo::before {
+    font-size: 52px;
+  }
+  .person .role {
+    font-size: 13.5px;
+    margin-top: 10px;
+  }
+  .person .name {
+    font-size: 17.5px;
+    margin-top: 2px;
+  }
+  .person .mail {
+    font-size: 13px;
+    margin-top: 4px;
   }
   .site-foot {
     padding: 26px 0 14px;
@@ -2543,30 +2584,30 @@ main > .band + * {
     line-height: 1.42;
   }
   .site-head .bar {
-    gap: 4px;
-    padding: 4px 0 2px;
+    gap: 7px;
+    padding: 7px 0 5px;
   }
   .brand {
-    gap: 7px;
+    gap: 9px;
   }
   .brand img {
-    width: 40px;
-    height: 40px;
+    width: 46px;
+    height: 46px;
   }
   .brand strong {
-    font-size: 15px;
+    font-size: 16.5px;
   }
   .brand small {
-    font-size: 10px;
+    font-size: 11px;
   }
   .main-nav {
-    padding: 1px 10px 3px;
-    margin: 0 -10px;
-    gap: 4px;
+    padding: 2px 12px 5px;
+    margin: 0 -12px;
+    gap: 5px;
   }
   .main-nav a {
-    font-size: 11.5px;
-    padding: 3.5px 8px;
+    font-size: 12.5px;
+    padding: 5px 10px;
   }
   .hero-kicker {
     font-size: 8.5px;
@@ -2657,9 +2698,40 @@ main > .band + * {
   .infra-card-media img {
     height: 105px;
   }
+  .people.lead3 {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    max-width: 240px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .person {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .person .photo {
-    width: 46px;
-    height: 46px;
+    width: 190px;
+    height: 238px;
+    aspect-ratio: 4/5;
+    max-width: 100%;
+    border-radius: 12px;
+  }
+  .person .photo::before {
+    font-size: 50px;
+  }
+  .person .role {
+    font-size: 13px;
+    margin-top: 10px;
+  }
+  .person .name {
+    font-size: 17px;
+    margin-top: 2px;
+  }
+  .person .mail {
+    font-size: 12px;
+    margin-top: 3px;
   }
   .foot-logo-badge {
     height: 20px;

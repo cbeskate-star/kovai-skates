@@ -3434,8 +3434,8 @@
           .site-head .bar {
             flex-direction: column;
             align-items: stretch;
-            gap: 7px;
-            padding: 7px 0 5px;
+            gap: 8px;
+            padding: 8px 0 6px;
           }
 
           .site-head .brand {
@@ -3465,7 +3465,7 @@
           .site-head .main-nav {
             overflow-x: auto;
             margin: 0 -16px;
-            padding: 2px 16px 5px;
+            padding: 3px 16px 6px;
             -webkit-overflow-scrolling: touch;
             scrollbar-width: none;
             display: flex;
@@ -3478,7 +3478,7 @@
 
           .site-head .main-nav a {
             font-size: 13px;
-            padding: 5px 11px;
+            padding: 5.5px 12px;
             border-radius: 999px;
             background: #F1F4F9;
             color: #0D1F4F;
@@ -3502,6 +3502,50 @@
         }
 
         @media (max-width: 640px) {
+          .site-head .bar {
+            gap: 8px;
+            padding: 8px 0 6px;
+          }
+
+          .site-head .brand strong {
+            font-size: 17px;
+          }
+
+          .site-head .brand small {
+            font-size: 11.5px;
+          }
+
+          .site-head .brand img {
+            width: 48px;
+            height: 48px;
+          }
+
+          .site-head .main-nav {
+            padding: 2px 16px 6px;
+            gap: 6px;
+          }
+
+          .site-head .main-nav a {
+            font-size: 13px;
+            padding: 5px 12px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .site-head .bar {
+            gap: 7px;
+            padding: 7px 0 5px;
+          }
+
+          .site-head .brand {
+            gap: 9px;
+          }
+
+          .site-head .brand img {
+            width: 46px;
+            height: 46px;
+          }
+
           .site-head .brand strong {
             font-size: 16.5px;
           }
@@ -3510,44 +3554,15 @@
             font-size: 11px;
           }
 
-          .site-head .brand img {
-            width: 46px;
-            height: 46px;
-          }
-        }
-
-        @media (max-width: 480px) {
-          .site-head .bar {
-            gap: 5px;
-            padding: 5px 0 3px;
-          }
-
-          .site-head .brand {
-            gap: 8px;
-          }
-
-          .site-head .brand img {
-            width: 42px;
-            height: 42px;
-          }
-
-          .site-head .brand strong {
-            font-size: 15.5px;
-          }
-
-          .site-head .brand small {
-            font-size: 10px;
-          }
-
           .site-head .main-nav {
-            padding: 1px 12px 4px;
+            padding: 2px 12px 5px;
             margin: 0 -12px;
             gap: 5px;
           }
 
           .site-head .main-nav a {
-            font-size: 12px;
-            padding: 4px 9px;
+            font-size: 12.5px;
+            padding: 5px 10px;
           }
         }
 
