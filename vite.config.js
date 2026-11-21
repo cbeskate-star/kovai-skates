@@ -11,7 +11,6 @@ export default defineConfig({
       input: {
         main: resolve(import.meta.dirname, 'index.html'),
         about: resolve(import.meta.dirname, 'about.html'),
-        history: resolve(import.meta.dirname, 'history.html'),
         events: resolve(import.meta.dirname, 'events.html'),
         facilities: resolve(import.meta.dirname, 'facilities.html'),
         infra: resolve(import.meta.dirname, 'our-infra.html'),
