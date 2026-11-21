@@ -4,7 +4,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "prebuild": "node scripts/verify-pages.js",
     "build": "vite build",
+    "check": "node scripts/verify-pages.js",
+    "test": "node scripts/verify-pages.js",
     "preview": "vite preview"
   },
   "repository": {

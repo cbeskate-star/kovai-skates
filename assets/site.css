@@ -471,17 +471,17 @@ a:focus-visible, button:focus-visible {
 .hero-kicker {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  font-size: 13.5px;
+  gap: 8px;
+  font-size: 11.5px;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
   color: #FFA338;
   background: rgba(245, 158, 11, 0.12);
   border: 1px solid rgba(245, 158, 11, 0.3);
-  padding: 5px 14px;
+  padding: 3.5px 11px;
   border-radius: var(--radius-full);
-  margin-bottom: 18px;
+  margin-bottom: 14px;
   backdrop-filter: blur(8px);
 }
 
@@ -489,11 +489,11 @@ a:focus-visible, button:focus-visible {
   display: inline-block;
   background: var(--orange-lt);
   color: var(--navy-deep);
-  font-size: 11px;
+  font-size: 9.5px;
   font-weight: 800;
-  padding: 2px 7px;
+  padding: 1.5px 6px;
   border-radius: var(--radius-full);
-  letter-spacing: 0.08em;
+  letter-spacing: 0.07em;
 }
 
 .badge {
@@ -2127,107 +2127,148 @@ a:focus-visible, button:focus-visible {
 
 @media (max-width: 640px) {
   body {
-    font-size: 14px;
-    line-height: 1.5;
+    font-size: 13.5px;
+    line-height: 1.48;
   }
   .wrap {
     padding: 0 16px;
   }
   .sec {
-    padding: 34px 0;
+    padding: 26px 0;
   }
   .sec-heading-group {
-    margin-bottom: 18px;
+    margin-bottom: 14px;
+    text-align: center;
   }
   .sec h2 {
-    font-size: clamp(20px, 4.8vw, 24px);
+    font-size: clamp(18px, 4.2vw, 21px);
     line-height: 1.18;
     text-wrap: balance;
   }
   .sec-pill {
-    font-size: 10.5px;
-    padding: 2.5px 8px;
-    margin-bottom: 8px;
+    font-size: 9.5px;
+    padding: 2px 7px;
+    margin-bottom: 6px;
   }
   .sub {
-    font-size: 13.5px;
-    line-height: 1.46;
-    margin-top: 6px;
+    font-size: 12px;
+    line-height: 1.42;
+    margin-top: 4px;
   }
   .brand strong {
-    font-size: 16.5px;
+    font-size: 16px;
   }
   .brand small {
-    font-size: 11px;
+    font-size: 10.5px;
   }
   .brand img {
     width: 38px;
     height: 38px;
   }
-  .hero h1 {
-    font-size: clamp(24px, 5.8vw, 30px);
-    line-height: 1.08;
-    text-wrap: balance;
-  }
-  .hero-stats-grid {
-    grid-template-columns: 1fr;
-    gap: 8px;
-  }
-  .hero-stats-bar {
-    margin-top: 22px;
-    padding-top: 16px;
-  }
-  .stat-card {
-    padding: 10px 12px;
-  }
-  .stat-num {
-    font-size: 20px;
-  }
-  .stat-lbl {
-    font-size: 11.5px;
-    margin-top: 2px;
-  }
-  .page-header h1 {
-    font-size: clamp(23px, 5.4vw, 28px);
-    line-height: 1.1;
-  }
-  .hero .lede, .page-header .lede {
-    font-size: 13.5px;
-    line-height: 1.48;
-    margin-top: 10px;
-  }
-  .hero-kicker {
-    font-size: 11px;
-    padding: 2.5px 8px;
-    margin-bottom: 10px;
+  .hero {
+    padding: 26px 0 30px;
   }
   .hero-grid {
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 16px;
+    gap: 12px;
+  }
+  .hero-kicker {
+    font-size: 9.5px;
+    padding: 2px 7px;
+    gap: 5px;
+    margin-bottom: 6px;
+    letter-spacing: 0.04em;
+    max-width: 95%;
+  }
+  .kicker-badge {
+    font-size: 8.5px;
+    padding: 1px 4.5px;
+  }
+  .hero h1 {
+    font-size: clamp(20px, 4.8vw, 24px);
+    line-height: 1.1;
+    margin: 4px 0 6px;
+    text-wrap: balance;
+  }
+  .hero .lede {
+    font-size: 12px;
+    line-height: 1.42;
+    margin-top: 6px;
+    max-width: 44ch;
+    color: rgba(255, 255, 255, 0.88);
   }
   .badge {
-    width: 80px;
-    height: 80px;
+    width: 68px;
+    height: 68px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25), 0 0 0 2px rgba(255, 255, 255, 0.16), 0 0 0 4px rgba(245, 158, 11, 0.25);
   }
   .badge img {
-    width: 66px;
-    height: 66px;
+    width: 54px;
+    height: 54px;
   }
   .hero .actions {
     width: 100%;
-    max-width: 290px;
-    margin: 14px auto 0;
+    max-width: 250px;
+    margin: 10px auto 0;
     flex-direction: column;
-    gap: 8px;
+    gap: 6px;
   }
   .hero .actions .btn, .btn {
     width: 100%;
-    min-height: 40px;
-    padding: 0 16px;
-    font-size: 13.5px;
+    min-height: 36px;
+    padding: 0 14px;
+    font-size: 12.5px;
+  }
+  .hero-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+  }
+  .hero-stats-bar {
+    margin-top: 16px;
+    padding-top: 12px;
+  }
+  .stat-card {
+    padding: 7px 8px;
+    border-radius: 8px;
+  }
+  .stat-num {
+    font-size: 15px;
+  }
+  .stat-lbl {
+    font-size: 9.5px;
+    line-height: 1.22;
+    margin-top: 2px;
+  }
+  .page-header {
+    padding: 24px 0 26px;
+  }
+  .page-header h1, .band h1 {
+    font-size: clamp(20px, 4.8vw, 24px);
+    line-height: 1.12;
+  }
+  .page-header .lede, .band p {
+    font-size: 12px;
+    line-height: 1.42;
+    margin-top: 6px;
+    max-width: 46ch;
+  }
+  .band-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+  }
+  .band-badge {
+    width: 58px;
+    height: 58px;
+  }
+  .band-badge img {
+    width: 46px;
+    height: 46px;
   }
   .bib {
     grid-template-columns: 1fr;
@@ -2235,242 +2276,334 @@ a:focus-visible, button:focus-visible {
   }
   .bib-date {
     flex-direction: row;
-    gap: 10px;
-    padding: 10px 14px;
+    gap: 8px;
+    padding: 8px 12px;
     justify-content: flex-start;
     align-items: baseline;
   }
   .bib-seal {
-    font-size: 10px;
-    padding: 2px 6px;
+    font-size: 9px;
+    padding: 1.5px 5px;
     margin-bottom: 0;
   }
   .bib-date .d {
-    font-size: 32px;
+    font-size: 26px;
     line-height: 1;
   }
   .bib-date .m {
     margin-top: 0;
-    font-size: 13px;
+    font-size: 11px;
   }
   .bib-body {
-    padding: 14px 14px 16px;
+    padding: 12px 14px;
+  }
+  .host-badge {
+    gap: 6px;
+  }
+  .host {
+    font-size: 10.5px;
+  }
+  .status-pill {
+    font-size: 9.5px;
+    padding: 2px 6px;
   }
   .bib-body h3 {
-    font-size: 17.5px;
+    font-size: 14.5px;
     line-height: 1.25;
+    margin: 4px 0 6px;
   }
   .bib dl, .bib-specs {
     grid-template-columns: 1fr;
-    gap: 6px;
-    font-size: 12.5px;
-    margin: 10px 0 14px;
-    padding: 8px 10px;
+    gap: 4px;
+    font-size: 11px;
+    margin: 6px 0 10px;
+    padding: 6px 8px;
   }
   .bib dl dt, .bib-specs dt {
-    font-size: 11px;
+    font-size: 9.5px;
   }
   .bib dl dd, .bib-specs dd {
-    font-size: 12.5px;
+    font-size: 11px;
   }
   .bib .actions .btn {
     width: 100%;
-    min-height: 40px;
-    font-size: 13.5px;
+    min-height: 36px;
+    font-size: 12px;
+  }
+  .chain {
+    gap: 8px;
+    margin-top: 14px;
+  }
+  .tier {
+    padding: 12px 14px;
+    border-radius: 10px;
+  }
+  .tier-top-tag {
+    font-size: 9.5px;
+    padding: 1.5px 5px;
+    margin-bottom: 6px;
+  }
+  .tier .lvl {
+    font-size: 10px;
+    padding: 1.5px 6px;
+  }
+  .tier .top {
+    min-height: 32px;
+    gap: 8px;
+  }
+  .tier .top img {
+    max-height: 28px;
+    max-width: 75px;
+  }
+  .tier .top img.square {
+    width: 30px;
+    height: 30px;
+    max-width: 30px;
+  }
+  .tier h3 {
+    font-size: 14.5px;
+    line-height: 1.2;
+    margin-top: 8px;
+  }
+  .tier p {
+    font-size: 11.5px;
+    line-height: 1.4;
+    margin-top: 4px;
+  }
+  .tier-meta {
+    font-size: 10.5px;
+    padding-top: 8px;
+    margin-top: 8px;
+  }
+  .link {
+    padding: 2px 0;
+  }
+  .link svg {
+    width: 14px;
+    height: 14px;
   }
   .infra-card-header {
     padding: 12px 14px 10px;
   }
   .infra-card-header h2 {
-    font-size: 17.5px;
+    font-size: 16.5px;
   }
   .infra-tag {
-    font-size: 10.5px;
-    padding: 2.5px 7px;
+    font-size: 9.5px;
+    padding: 2px 6px;
   }
   .infra-card-body {
-    padding: 12px 14px;
-    gap: 10px;
-    font-size: 13px;
-    line-height: 1.46;
+    padding: 10px 12px;
+    gap: 8px;
+    font-size: 12px;
+    line-height: 1.42;
   }
   .infra-specs {
     grid-template-columns: 1fr;
-    gap: 5px;
-    padding: 8px 10px;
-    font-size: 12px;
+    gap: 4px;
+    padding: 6px 8px;
+    font-size: 11px;
   }
   .infra-card-footer {
-    padding: 10px 14px 12px;
+    padding: 8px 12px 10px;
   }
   .infra-card-media img {
-    height: 160px;
+    height: 150px;
   }
   .person .photo {
-    width: 56px;
-    height: 56px;
+    width: 52px;
+    height: 52px;
   }
   .site-foot {
-    padding: 32px 0 16px;
+    padding: 26px 0 14px;
   }
   .site-foot .cols {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 16px;
   }
   .site-foot h2, .site-foot h3 {
-    font-size: 14px;
-    margin-bottom: 6px;
+    font-size: 13px;
+    margin-bottom: 4px;
   }
   .site-foot address, .foot-list, .mails dd a {
-    font-size: 12.5px;
+    font-size: 11.5px;
+    line-height: 1.4;
+  }
+  .f-brand strong {
+    font-size: 14px;
+  }
+  .f-brand p {
+    font-size: 11px;
+    line-height: 1.35;
+  }
+  .f-reg-tag {
+    font-size: 10px;
+    padding: 1.5px 5px;
   }
   .foot-social {
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 6px;
+    gap: 5px;
   }
   .social-link {
-    font-size: 12px;
-    padding: 4px 8px;
+    font-size: 11px;
+    padding: 3px 6px;
   }
   .disc-logo {
-    width: 44px;
-    height: 44px;
-  }
-  .disc-logo img {
     width: 38px;
     height: 38px;
   }
+  .disc-logo img {
+    width: 32px;
+    height: 32px;
+  }
   .site-foot .legal {
-    margin-top: 22px;
-    padding: 12px 0 14px;
-    font-size: 11.5px;
+    margin-top: 16px;
+    padding: 10px 0 12px;
+    font-size: 10.5px;
   }
   .site-foot .legal-row {
     flex-direction: column;
     text-align: center;
-    gap: 6px;
+    gap: 4px;
   }
   .front-trust-row {
-    gap: 12px;
+    gap: 10px;
   }
   .front-trust-row img {
-    height: 20px;
+    height: 18px;
   }
   .front-trust-row img.crest-tall {
-    height: 23px;
+    height: 20px;
   }
   .foot-logos-row, .foot-logos-group {
-    gap: 6px;
-    margin-top: 6px;
+    gap: 5px;
+    margin-top: 5px;
   }
   .foot-logo-badge {
-    height: 26px;
-    padding: 3px 6px;
-    border-radius: 5px;
+    height: 22px;
+    padding: 2px 5px;
+    border-radius: 4px;
   }
   .foot-logo-badge img {
-    height: 15px;
-    max-width: 54px;
+    height: 13px;
+    max-width: 48px;
   }
   .foot-logo-badge img.crest-tall {
-    height: 18px;
+    height: 15px;
   }
 }
 
 @media (max-width: 480px) {
   body {
-    font-size: 13px;
-    line-height: 1.46;
+    font-size: 12.5px;
+    line-height: 1.42;
   }
   .site-head .bar {
-    gap: 5px;
-    padding: 5px 0 3px;
+    gap: 4px;
+    padding: 4px 0 2px;
   }
   .brand {
-    gap: 8px;
+    gap: 7px;
   }
   .brand img {
-    width: 36px;
-    height: 36px;
+    width: 34px;
+    height: 34px;
   }
   .brand strong {
-    font-size: 15px;
+    font-size: 14.5px;
   }
   .brand small {
-    font-size: 10px;
+    font-size: 9.5px;
   }
   .main-nav {
-    padding: 1px 12px 4px;
-    margin: 0 -12px;
-    gap: 5px;
+    padding: 1px 10px 3px;
+    margin: 0 -10px;
+    gap: 4px;
   }
   .main-nav a {
-    font-size: 12px;
-    padding: 4px 9px;
+    font-size: 11.5px;
+    padding: 3.5px 8px;
+  }
+  .hero-kicker {
+    font-size: 8.5px;
+    padding: 1.5px 5px;
+    gap: 4px;
+  }
+  .kicker-badge {
+    font-size: 7.5px;
+    padding: 1px 4px;
   }
   .hero h1 {
-    font-size: 22px;
+    font-size: 19px;
+    line-height: 1.1;
+  }
+  .hero .lede {
+    font-size: 11.5px;
+    line-height: 1.38;
+  }
+  .page-header h1, .band h1 {
+    font-size: 19px;
     line-height: 1.12;
   }
-  .page-header h1 {
-    font-size: 21px;
-    line-height: 1.14;
+  .page-header .lede, .band p {
+    font-size: 11.5px;
+    line-height: 1.38;
   }
   .sec h2 {
-    font-size: 18.5px;
+    font-size: 17px;
   }
   .sec h3, .infra-card-header h2, .bib-body h3 {
-    font-size: 15.5px;
+    font-size: 14px;
   }
-  .sub, .hero .lede, .page-header .lede {
-    font-size: 12.5px;
-    line-height: 1.44;
+  .sub {
+    font-size: 11.5px;
+    line-height: 1.38;
   }
   .stat-num {
-    font-size: 18px;
+    font-size: 14px;
   }
   .stat-lbl {
-    font-size: 10.5px;
+    font-size: 9px;
   }
   .btn, .hero .actions .btn {
-    min-height: 38px;
-    padding: 0 14px;
-    font-size: 13px;
+    min-height: 34px;
+    padding: 0 12px;
+    font-size: 11.5px;
   }
   .badge {
-    width: 70px;
-    height: 70px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25), 0 0 0 1.5px rgba(255, 255, 255, 0.15), 0 0 0 3px rgba(245, 158, 11, 0.2);
+    width: 60px;
+    height: 60px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.22), 0 0 0 1.5px rgba(255, 255, 255, 0.15), 0 0 0 3px rgba(245, 158, 11, 0.2);
   }
   .badge img {
-    width: 58px;
-    height: 58px;
+    width: 48px;
+    height: 48px;
   }
   .band-badge {
-    width: 56px;
-    height: 56px;
+    width: 48px;
+    height: 48px;
   }
   .band-badge img {
-    width: 44px;
-    height: 44px;
+    width: 38px;
+    height: 38px;
   }
   .infra-card-media img {
-    height: 140px;
+    height: 130px;
   }
   .person .photo {
-    width: 50px;
-    height: 50px;
+    width: 46px;
+    height: 46px;
   }
   .foot-logo-badge {
-    height: 24px;
-    padding: 2px 5px;
+    height: 20px;
+    padding: 1.5px 4px;
   }
   .foot-logo-badge img {
-    height: 14px;
-    max-width: 50px;
+    height: 12px;
+    max-width: 44px;
   }
   .foot-logo-badge img.crest-tall {
-    height: 16px;
+    height: 14px;
   }
 }
